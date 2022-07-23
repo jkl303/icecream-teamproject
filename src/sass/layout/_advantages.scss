@@ -1,0 +1,52 @@
+.advantages {
+  background-color: $background-color;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+//.adv-list
+
+.adv-list-element {
+  margin-bottom: 32px;
+}
+
+.figures {
+  font-family: 'Titan One';
+  color: $main-title-color;
+  @include fonts(400, 36px, 1.14, 0.04em);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.figures-text {
+  @include fonts(700, 12px, 1.7, null);
+  font-family: 'DM Sans';
+  color: #000000;
+}
+
+.figure-1::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/mobile/mob-milk-cup.png);
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+  height: 50px;
+}
+
+.figure-1::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/mobile/mob-applecup.png);
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+  height: 50px;
+}
+
+.figure-3::before {
+  content: '';
+  display: inline-block;
+  background-image: url(../images/mobile/mob-heart.png);
+  background-repeat: no-repeat;
+  margin-bottom: 16px;
+  height: 50px;
+}

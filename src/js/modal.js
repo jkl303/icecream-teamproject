@@ -2,7 +2,7 @@
   const refs = {
     openModalBtn: document.querySelector('.buy-now'),
     closeModalBtn: document.querySelector('.close-modal-btn'),
-    modal: document.querySelector('.modal'),
+    modal: document.querySelector('.backdrop__header'),
     body: document.querySelector('body'),
   };
 
