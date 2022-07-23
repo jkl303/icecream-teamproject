@@ -1,0 +1,162 @@
+<section class="brunches" id="contact">
+    <div class="container">
+        <h2 class="visually-hidden">Our brunches</h2>
+
+        <ul class="brunches__list">
+            <li class="brunches__card">
+                <span class="brunches__point">CAFE</span>
+                <h3 class="brunches__sity">Chicago</h3>
+                <p class="brunches__text">
+                    Fusce ut velit laoreet, tempus arcu molestie vulputate
+                </p>
+                <div class="scheduele-box">
+                    <ul>
+                        <li>
+                            <p class="schedule-days">Monday - Friday</p>
+                            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+                        </li>
+
+                        <li>
+                            <p class="schedule-days">Saturday - Sunday</p>
+                            <p class="schedule-houres schedule-houres--reset">
+                                08:00 AM - 16:00 PM
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <a class="brunches__contacts" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    </li>
+                    <li>
+                        <a class="brunches__contacts" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="brunches__card">
+                <span class="brunches__point brunches__point--green">FOODTRUCK</span>
+                <h3 class="brunches__sity">Los Angeles</h3>
+                <p class="brunches__text">
+                    Fusce ut velit laoreet, tempus arcu molestie vulputate
+                </p>
+                <div class="scheduele-box">
+                    <ul>
+                        <li>
+                            <p class="schedule-days">Monday - Friday</p>
+                            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+                        </li>
+
+                        <li>
+                            <p class="schedule-days">Saturday - Sunday</p>
+                            <p class="schedule-houres">08:00 AM - 16:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <a class="brunches__contacts" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    </li>
+                    <li>
+                        <a class="brunches__contacts" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="brunches__card">
+                <span class="brunches__point">CAFE</span>
+                <h3 class="brunches__sity">New York</h3>
+                <p class="brunches__text">
+                    Fusce ut velit laoreet, tempus arcu molestie vulputate
+                </p>
+                <div class="scheduele-box">
+                    <ul>
+                        <li>
+                            <p class="schedule-days">Monday - Friday</p>
+                            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+                        </li>
+
+                        <li>
+                            <p class="schedule-days">Saturday - Sunday</p>
+                            <p class="schedule-houres">08:00 AM - 16:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul>
+                    <li>
+                        <a class="brunches__contacts" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    </li>
+                    <li>
+                        <a class="brunches__contacts" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+                <button class="modal-location" type="button">
+                    Our Locations
+                    <svg width="7" height="10">
+                        <use href="./images/mobile/sprite.svg#icon-arrov-white"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button class="modal-franchise" type="button" data-modal-open>
+                    Franchise
+                    <svg width="7" height="10">
+                        <use href="./images/mobile/sprite.svg#icon-arrov-red"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-button" data-modal-close>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25925 1L14.7407 15" stroke="white" />
+                    <path d="M1 14.7407L15 1.25924" stroke="white" />
+                </svg>
+            </button>
+
+            <form class="request-form">
+                <b class="request-form__title">Leave your details, our manager will contact you</b>
+                <div class="form-field">
+                    <label class="request-form__label" for="name">Name</label>
+                    <input class="request-form__input" type="text" name="name" id="name" />
+                    <!-- <svg class="request-form__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-person-black"></use>
+          </svg> -->
+                </div>
+
+                <div class="form-field">
+                    <label class="request-form__label" for="tel">Tel</label>
+                    <input class="request-form__input" type="tel" id="tel" name="tel" />
+                    <!-- <svg class="request-form__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-phone-black"></use>
+          </svg> -->
+                </div>
+
+                <div class="form-field">
+                    <label class="request-form__label" for="email">Email</label>
+                    <input class="request-form__input" type="email" id="email" name="email" />
+                    <!-- <svg class="request-form__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-email-black"></use>
+          </svg> -->
+                </div>
+
+                <label class="request-form__label" for="comment">Comment</label>
+                <textarea class="request-comment-area" name="comment" id="comment" rows="4"
+                    placeholder="Leave comment here"></textarea>
+
+                <button class="button request-form__button" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/contacts-modal.js"></script>
+</section>
