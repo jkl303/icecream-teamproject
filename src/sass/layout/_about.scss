@@ -1,0 +1,97 @@
+//body {
+//   width: 100%;
+//   margin: 0;
+//   font-family: 'DM Sans', sans-serif;
+//}
+
+//.container {
+//   width:280px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   margin: 0 auto;
+//}
+
+.about {
+  width: 100%;
+  background-color: $background-color;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.about__pre-title {
+  font-family: 'Titan One';
+  text-align: center;
+  @include fonts(400, 18px, 1.16, null);
+  color: $second-title-color;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.about__title {
+  font-family: 'Titan One';
+  @include fonts(400, 34px, 1.15, null);
+  text-align: center;
+  text-transform: uppercase;
+  color: $main-title-color;
+
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.about-content-bckg {
+  width: 100%;
+  background-image: url(../images/mobile/mob-milk-1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include retina {
+    background-image: url(../images/mobile/mob-milk-2x.png);
+  }
+}
+
+.about-content__after {
+  margin-top: 40px;
+}
+
+.about-content__after-title {
+  @include fonts(500, 12px, 1.62, 0.04em);
+  color: #000000;
+  width: 220px;
+}
+
+.about-content__after-text {
+  @include fonts(500, 12px, 1.62, null);
+  width: 220px;
+  color: $text-color;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-content__btn {
+  @include fonts(700, 14px, 1.28, null);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $main-title-color;
+  margin-right: 124px;
+  cursor: pointer;
+  width: 176px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 22px;
+  border: transparent;
+}
+
+.about-content__btn:hover,
+.about-content__btn:focus {
+  background-color: $header-color;
+}
+.about-content__btn {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon {
+  margin-left: 14px;
+}
