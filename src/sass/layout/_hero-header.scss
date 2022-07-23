@@ -65,6 +65,16 @@
   font-size: 14px;
   line-height: calc(18 / 14);
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buy-now:hover {
+  background: $main-title-color;
+}
+
+.buy-now:hover .buy-now-span {
+  color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-buy {
@@ -99,6 +109,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu__link:hover,
