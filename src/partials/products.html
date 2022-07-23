@@ -3,37 +3,59 @@
         <p class="label"> 100% natural </p>
         <h2 class="products-title">products</h2>
         <ul class="products-list">
-            <li class="products-item products-item__first">
+            <li class="products-item products-item__first" data-menu>
                 <img srcset="./images/mobile/mob-icecream-1x.png 1x, ./images/mobile/mob-icecream-2x.png 2x"
                     src="./images/mobile/mob-icecream-1x.png" alt="icecream" class="products-img">
-                <h3 class="products-item__title">ICE CREAM</h3>
-                <div class="products-circle">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                <div class="products-thumb">
+                    <h3 class="products-item__title">ICE CREAM</h3>
+                    <div class="products-circle">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+
+                    <p class="products-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et. dolore magna aliqua facilisis. </p>
+                    <p class="thumb-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum
+                        voluptatibus,
+                        consectetur adipisci nam tempora iste voluptate placeat cupiditate! Voluptates adipisci
+                        perferendis nulla officiis vero blanditiis cumque maiores totam quia!</p>
                 </div>
 
-                <p class="products-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et. dolore magna aliqua facilisis. </p>
-                <button type="button" class="products-button"><svg width="10" height="10" class="products-icon">
-                        <use href="./images/mobile/sprite.svg#icon-arrow-right"></use>
+                <button type="button" class="products-button " data-menu-button aria-expanded="false">
+                    <svg width="10" height="10">
+                        <use href="./images/mobile/sprite.svg#icon-arrow-right" class="products-icon"></use>
+                        <use href="./images/mobile/sprite.svg#icon-close" class="products-close"></use>
                     </svg></button>
 
             </li>
-            <li class="products-item products-item__scnd">
+            <li class="products-item products-item__scnd" data-menu>
                 <img srcset="./images/mobile/mob-icecoffee-1x.png 1x, ./images/mobile/mob-icecoffee-2x.png 2x"
                     src="./images/mobile/mob-icecoffee-1x.png" alt="icecoffee" class="products-img">
-                <h3 class="products-item__title">ICE COFEE</h3>
-                <div class="products-circle">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
+                <div class="products-thumb">
+                    <h3 class="products-item__title">ICE CREAM</h3>
+                    <div class="products-circle">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+
+                    <p class="products-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod
+                        tempor incididunt ut labore et. dolore magna aliqua facilisis. </p>
+                    <p class="thumb-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium illum
+                        voluptatibus,
+                        consectetur adipisci nam tempora iste voluptate placeat cupiditate! Voluptates adipisci
+                        perferendis nulla officiis vero blanditiis cumque maiores totam quia!</p>
                 </div>
-                <p class="products-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et. dolore magna aliqua facilisis. </p>
-                <button type="button" class="products-button"><svg width="10" height="10" class="products-icon">
-                        <use href="./images/mobile/sprite.svg#icon-arrow-right"></use>
+
+                <button type="button" class="products-button " data-menu-button aria-expanded="false">
+                    <svg width="10" height="10">
+                        <use href="./images/mobile/sprite.svg#icon-arrow-right" class="products-icon"></use>
+                        <use href="./images/mobile/sprite.svg#icon-close" class="products-close"></use>
                     </svg></button>
+
             </li>
             <li class="products-item products-item__thrd">
                 <img srcset="./images/mobile/mob-milkshakes-1x.png 1x, ./images/mobile/mob-milkshakes-2x.png 2x"
@@ -52,4 +74,5 @@
             </li>
         </ul>
     </div>
+    <script src="./menu.js"></script>
 </section>
