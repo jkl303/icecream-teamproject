@@ -1,20 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Icecream with passion</title>
+<header>
+      <div class="container header__indent">
+        <div class="header__nav-mobile">
+          <img src="./images/mobile/logo-1x.png" alt="logo" />
+          <button type="button" class="menu-open-btn">
+            <svg class="button__burger" width="20" height="12">
+              <use href="./icons.svg#icon-burger" ></use>
+            </svg>
+          </button>
+          <div class="mob-menu is-hidden">
+            <button type="button" class="close-menu-btn">
+              <svg class="close-menu-icon" width="14" height="14">
+                <use href="./icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="btn-indend">
+              <button type="button" class="buy-now">Buy now
+                <span class="span-icon">
+                  <svg class="buy-now-icon" width="5.5" height="8">
+                    <use href='./icons.svg#icon-buy-now'></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <ul class="nav-menu__list">
+                    <li class="nav-menu__item"><a href="#about" class="nav-menu__link">Home</a></li>
+                    <li class="nav-menu__item"><a href="#tradition" class="nav-menu__link">About us</a></li>
+                    <li class="nav-menu__item"><a href="#products" class="nav-menu__link">How it’s made?</a></li>
+                    <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Our products</a></li>
+                    <li class="nav-menu__item"><a href="#footer" class="nav-menu__link">Contact</a></li>
+                </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-      rel="stylesheet"
-    />
+              <div class="container">
+                <div class="hero-wrapper">
+                  <div class="hero-title-wrapper">
+                    <h1 class="hero-title">Ice cream made with <span class="hero-second-title">passion</span></h1>
+                  </div>
 
-    <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
-  <body>
-    <script type="module" src="./index.js"></script>
-  </body>
-</html>
+                  <div class="hero-link-wrapper">
+                    <ul class="hero-link-list list">
+                      <li class="hero-link-item">
+                        <a href="#products" class="link-products link">
+                          Products</a>
+                      </li>
+                      <li class="hero-link-item">
+                        <a href="#tradition" class="link-howitsmade link">
+                          How it's made?</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="circle-wraper">
+                  <div class="circle"></div>
+                </div>
+
+                <div class="ice-cream"></div>
+
+              </div>
+
+            </section>
+        <div class="backdrop">
+        <div class="modal is-hidden">
+            <button type="button" class="close-modal-btn">
+              <svg class="close-menu-icon" width="14" height="14">
+                <use href="./icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <p class="modal-title">Buy now</p>
+            <form name=""></form>
+          </div>
+        </div>
+
