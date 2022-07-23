@@ -1,8 +1,5 @@
-.container {
-  max-width: 1600px;
-}
-.header__indent {
-  background: $header-color;
+.header {
+  background-color: $header-color;
 }
 
 .is-hidden {
@@ -21,6 +18,7 @@
 }
 
 .header__nav-mobile {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
