@@ -1,0 +1,52 @@
+.footer {background-color: $background-color;
+    &__small-title {
+    width: 232px;
+    margin-bottom: 16px;
+
+    font-family: 'Titan One';
+    @include fonts(400, 18px, 1.17, null);
+    text-transform: uppercase;
+    color: $second-title-color;
+}
+    &__big-title {
+    width: 200px;
+    margin-bottom: 40px;
+
+    font-family: 'Titan One';
+    @include fonts(400, 34px, 1.15, 0.04em);
+    text-transform: uppercase;
+    color: $main-title-color;
+}
+    &__contact {
+    width: 230px;
+    margin: 40px 0 40px auto;
+
+    font-family: 'DM Sans';
+    @include fonts(700, 12px, 1.86, null);
+    }
+    &__tel {text-decoration: none;
+    color: $main-title-color;}
+    &__legal {padding: 16px 20px 3px;
+        border-top: 1px solid #E1E1E1;
+        &-text {padding: 0 70px;
+            font-family: 'DM Sans';
+            @include fonts(700, 14px, 1.52, null);
+        color: $text-color;
+        text-align: center;
+    }}
+}
+
+.socials {display: flex;
+    flex-direction: row-reverse;
+    gap: 28.24px;
+    &__link {display: block;
+    width:32px;
+    height: 32px;
+    background-color: $socials-color;
+    border-radius: 50%;
+    fill: #fff;
+    @include transition;
+    &:hover, &:focus {background-color: $main-title-color;}}
+}
+
+.container--zero-padding {padding: 0;}

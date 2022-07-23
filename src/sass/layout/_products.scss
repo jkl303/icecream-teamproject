@@ -1,0 +1,94 @@
+.products {
+  padding-bottom: 60px;
+}
+.products-list {
+  position: relative;
+}
+
+.label {
+  margin-bottom: 15px;
+  font-family: 'Titan One', sans-serif;
+  @include fonts(400, 18px, 1.17, 0.04em);
+  text-align: center;
+  color: $second-title-color;
+}
+
+.products-title {
+  margin-bottom: 8px;
+  font-family: 'Titan One', sans-serif;
+
+  @include fonts(400, 34px, 1.15, 0.04em);
+  text-align: center;
+  color: $main-title-color;
+}
+
+.products-item {
+  position: relative;
+  margin-top: 140px;
+
+  width: 280px;
+  height: 489px;
+  border-radius: 24px;
+  &__first {
+    background-color: $header-color;
+  }
+  &__scnd {
+    background-color: $second-bg-color;
+  }
+  &__thrd {
+    background-color: $third-bg-color;
+  }
+}
+.products-img {
+  position: absolute;
+  top: -140px;
+}
+.products-item__title {
+  margin-bottom: 32px;
+  text-align: center;
+  padding-top: 160px;
+  font-family: 'Titan One', sans-serif;
+  @include fonts(400, 20px, 1.15, 0.04em);
+  color: #fff;
+}
+.products-circle {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  margin-bottom: 32px;
+}
+.circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.products-item__text {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  width: 200px;
+  font-family: 'DM Sans', sans-serif;
+  @include fonts(700, 14px, 1.15, 0.04em);
+  text-align: center;
+  color: #fff;
+}
+
+.products-button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+}
+
+.products-icon {
+  height: 10px;
+  fill: $main-title-color;
+}

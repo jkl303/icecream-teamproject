@@ -1,1 +1,57 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  //@include tablet {
+  //max-width: 768px;
+  //padding: 0 16px;
+  //}
+
+  //@include desktop {
+  //   max-width: 1200px;
+  //}
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
