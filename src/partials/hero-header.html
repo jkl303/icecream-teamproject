@@ -1,23 +1,26 @@
-<header>
-      <div class="container header__indent">
+   <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
         <div class="header__nav-mobile">
           <img src="./images/mobile/logo-1x.png" alt="logo" />
           <button type="button" class="menu-open-btn">
             <svg class="button__burger" width="20" height="12">
-              <use href="./icons.svg#icon-burger" ></use>
+              <use href="./images/mobile/sprite.svg#icon-burger" ></use>
             </svg>
           </button>
           <div class="mob-menu is-hidden">
             <button type="button" class="close-menu-btn">
               <svg class="close-menu-icon" width="14" height="14">
-                <use href="./icons.svg#icon-close"></use>
+                <use href="./images/mobile/sprite.svg#icon-close"></use>
               </svg>
             </button>
             <div class="btn-indend">
-              <button type="button" class="buy-now">Buy now
+              <button type="button" class="buy-now"><span class="buy-now-span">Buy now</span>
                 <span class="span-icon">
                   <svg class="buy-now-icon" width="5.5" height="8">
-                    <use href='./icons.svg#icon-buy-now'></use>
+                    <use href='./images/mobile/sprite.svg#icon-arrow-right'></use>
                   </svg>
                 </span>
               </button>
@@ -31,7 +34,6 @@
                 </ul>
           </div>
         </div>
-      </div>
     </header>
     <section class="hero">
 
@@ -64,15 +66,18 @@
               </div>
 
             </section>
-        <div class="backdrop">
-        <div class="modal is-hidden">
+         <!-- <div class="backdrop__header is-hidden">
+          <div class="modal__header">
             <button type="button" class="close-modal-btn">
               <svg class="close-menu-icon" width="14" height="14">
-                <use href="./icons.svg#icon-close"></use>
+                <use href="./images/mobile/sprite.svg#icon-close"></use>
               </svg>
             </button>
             <p class="modal-title">Buy now</p>
             <form name=""></form>
-          </div>
-        </div>
-
+          </div> -->
+         </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>
