@@ -28,9 +28,8 @@
           </p>
         </div>
       </div>
-      <button type="button" class="about-content__btn">
+      <button type="button" class="about-content__btn" data-modal-open>
         Read more
-
         <svg class="icon" width="10" height="8">
           <use href="./images/mobile/sprite.svg#icon-ar"></use>
         </svg>
@@ -38,3 +37,26 @@
     </div>
   </section>
 </main>
+
+  <!--Модальное окно-->
+  <div class="backdrop-about is-hidden" data-modal>
+    <div class="modal-about">
+      <button type="button" class="modal-about-btn" data-modal-close>
+        <svg class="about-icon" width="9" height="9">
+          <use href="./images/mobile/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="modal-about-title">
+       tradition and love
+      </h2>
+      <p class="modal-about-text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+        Mauris rhoncus orci in imperdiet placerat.
+        Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
+        Cras massa nibh, tincidunt.
+        Aliquam erat volutpat. Aenean accumsan.</p>
+      <img src="./images/mobile/mob-icecream-1x.png" alt="">
+    </div>
+  </div>
+
+  <script src="./js/modal-about.js"></script>
+
