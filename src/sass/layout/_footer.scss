@@ -29,7 +29,6 @@
     &__legal {padding: 16px 20px 3px;
         border-top: 1px solid #E1E1E1;
         &-text {padding: 0 70px;
-            font-family: 'DM Sans';
             @include fonts(700, 14px, 1.52, null);
         color: $text-color;
         text-align: center;
