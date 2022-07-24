@@ -1,12 +1,12 @@
 .advantages {
   background-color: $background-color;
-  padding-top: 40px;
+  //padding-top: 40px;
   padding-bottom: 60px;
 }
 
 //.adv-list
 
-.adv-list-element {
+.adv-list-element:not(:last-child) {
   margin-bottom: 32px;
 }
 
