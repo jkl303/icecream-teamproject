@@ -1,18 +1,20 @@
+@mixin tablet {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin transition($property: background-color) {
   transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-//@mixin tablet {
-//    @media screen and (min-width: 768px) {
-//       @content;
-//   }
-//}
 
-//@mixin desktop {
-//@media screen and (min-width: 1200px) {
-//    @content;
-//}
-//}
 @mixin fonts($fw, $fs, $lh, $ls) {
   font-weight: $fw;
   font-size: $fs;
