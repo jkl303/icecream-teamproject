@@ -1,18 +1,15 @@
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-   <link rel="stylesheet" href="./sass/index.scss" />
-  </head>
-  <body>
-    <header class="header">
+
+  <header class="header">
       <div class="container">
         <div class="header__nav-mobile">
           <img src="./images/logo-1x.png" alt="logo" />
-          <button type="button" class="menu-open-btn">
+          <button type="button" class="header__burger-open">
             <svg class="button__burger" width="20" height="12">
               <use href="./icons.svg#icon-burger" ></use>
             </svg>
           </button>
           <div class="mob-menu invisible">
-            <button type="button" class="close-menu-btn">
+            <button type="button" class="header__burger-close">
               <svg class="close-menu-icon" width="14" height="14">
                 <use href="./icons.svg#icon-close"></use>
               </svg>
@@ -99,7 +96,5 @@
             </form>
           </div>
          </div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
-  </body>
-</html>
+    <script type="module" src="./js/modal.js"></script>
+    <script type="module" src="./js/mobile-menu.js"></script>
