@@ -1,8 +1,14 @@
 .products {
   padding: 60px 0;
+  // @include tablet;
 }
 .products-list {
   position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include tablet {
+    display: flex;
+    gap: 16px;
+  }
 }
 
 .label {
@@ -11,6 +17,10 @@
   @include fonts(400, 18px, 1.17, 0.04em);
   text-align: center;
   color: $second-title-color;
+  @include tablet {
+    @include fonts(null, 28px, 1.15, null);
+    margin-bottom: 18px;
+  }
 }
 
 .products-title {
@@ -20,15 +30,26 @@
   @include fonts(400, 34px, 1.15, 0.04em);
   text-align: center;
   color: $main-title-color;
+  @include tablet {
+    @include fonts(null, 48px, null, null);
+    margin-bottom: 20px;
+  }
 }
 
 .products-item {
   position: relative;
-  margin-top: 140px;
+  margin-top: calc(280 / 2);
+  padding-bottom: 40px;
 
   width: 280px;
-  height: 489px;
+  // height: 489px;
   border-radius: 24px;
+  @include tablet {
+    margin-top: calc(224 / 2);
+
+    width: 224px;
+    // height: 473px;
+  }
   &__first {
     background-color: $header-color;
   }
@@ -42,7 +63,15 @@
 .products-img {
   position: absolute;
   top: -140px;
+  width: 280px;
+  height: 280px;
   z-index: 1;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include tablet {
+    top: -112px;
+    width: 224px;
+    height: 224px;
+  }
 }
 .products-item__title {
   margin-bottom: 32px;
@@ -51,6 +80,10 @@
   font-family: 'Titan One', sans-serif;
   @include fonts(400, 20px, 1.15, 0.04em);
   color: #fff;
+
+  @include tablet {
+    padding-top: 144px;
+  }
 }
 .products-circle {
   display: flex;
@@ -74,6 +107,13 @@
   @include fonts(700, 14px, 1.15, 0.04em);
   text-align: center;
   color: #fff;
+
+  @include tablet {
+    height: 150px;
+    width: 160px;
+    line-height: 1.76;
+    overflow: hidden;
+  }
 }
 
 .products-button {
@@ -82,6 +122,7 @@
   transform: translateX(-50%);
   width: 40px;
   height: 40px;
+  // margin-bottom: 40px;
 
   cursor: pointer;
   background-color: #fff;
@@ -134,7 +175,7 @@
   height: 100%;
   border-radius: 25px;
   transform: scale(0);
-  transition: transform 1s ease-in-out;
+  @include transition(transform);
 
   font-family: 'DM Sans', sans-serif;
   @include fonts(700, 19px, 1.15, 0.04em);
@@ -156,5 +197,5 @@
   }
 }
 .products-item.is-open .thumb-text {
-  transform: scale(1) rotate(1080deg);
+  transform: scale(1) rotate(720deg);
 }
