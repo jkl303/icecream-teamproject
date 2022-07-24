@@ -37,7 +37,6 @@
         </div>
     </header>
     <section class="hero">
-
               <div class="container">
                 <div class="hero-wrapper">
                   <div class="hero-title-wrapper">
@@ -67,7 +66,7 @@
               </div>
 
             </section>
-         <!-- <div class="backdrop__header is-hidden">
+         <div class="backdrop__header is-hidden">
           <div class="modal__header">
             <button type="button" class="close-modal-btn">
               <svg class="close-menu-icon" width="14" height="14">
@@ -75,8 +74,35 @@
               </svg>
             </button>
             <p class="modal-title">Buy now</p>
-            <form name=""></form>
-          </div> -->
+            <form class="header__modal-form">
+              <div class="header__modal-form-field">
+                <label for="user-name" class="header__modal-label">Name</label>
+                <input type="text" id="user-name" class="header__modal-input" required placeholder="John">
+              </div>
+              <div class="header__modal-form-field">
+                <label for="email" class="header__modal-label">Email</label>
+                <input type="text" id="email" class="header__modal-input" required placeholder="order@gmail.com">
+              </div>
+              <div class="header__modal-form-field">
+                <label for="tel" class="header__modal-label">Tel</label>
+                <input type="number" id="tel" class="header__modal-input" required placeholder="+3800501111111">
+              </div>
+              <div class="header__modal-form-field">
+                <label for="product" class="header__modal-label">Select product</label>
+                <select id="product" name="product" class="header__modal-select">
+                  <option value="ice-cream">Icecream</option>
+                  <option value="ice-coffe">Ice-coffe</option>
+                  <option value="milkshake">Milkshake</option>
+              </div>
+              <div class="header__modal-form-textarea">
+                <label for="comments" class="header__modal-label">Comments</label>
+                <textarea name="comments" id="comments" cols="20" rows="10" class="header__modal-textarea textarea" placeholder="Write here"></textarea>
+              </div>
+              <div class="header__modal-submit">
+                <button type="submit" class="buy-now modal-submit">Submit</button>
+              </div>
+            </form>
+          </div>
          </div>
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>

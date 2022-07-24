@@ -2,7 +2,7 @@
   background-color: $header-color;
 }
 
-.is-hidden {
+.mobmenu.is-hidden {
   left: -100%;
   -webkit-transition: all ease-out 0.5s;
   -moz-transition: all ease-out 0.5s;
@@ -128,7 +128,7 @@ body {
 }
 .hero {
   width: 100%;
-  height: 436px;
+  height: 502px;
   background-color: #ffb8ca;
 }
 
@@ -255,22 +255,34 @@ body {
 // MODAL //
 
 .backdrop__header {
-  position: absolute;
-  top: 0;
-  right: 0;
+  background: rgba(222, 35, 163, 0.404);
   width: 100%;
   height: 100%;
-  background-color: $background-color;
+}
+
+.backdrop__header.is-hidden {
+  opacity: 0;
+}
+
+.backdrop__header.is-hidden .modal__header {
+  transform: scale(0.9) translateX(70%);
+  transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .modal__header {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  left: 10px;
   width: 300px;
-  height: 450px;
+  height: 580px;
   z-index: 110;
   background-color: $ellipse-color;
+  border-radius: 20px;
+  background-image: url('/src/images/mobile/mob-icecoffee-1x.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: opacity(1) translateX(70%);
+  transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .close-modal-btn {
@@ -286,4 +298,67 @@ body {
   color: $background-color;
   padding-top: 50px;
   text-align: center;
+}
+
+.header__modal-label {
+  @include fonts(700, 10, 1.29, null);
+  color: $text-color;
+}
+
+.header__modal-form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30px;
+  gap: 15px;
+  align-items: center;
+}
+
+.header__modal-form-field {
+  height: 50px;
+  width: 100%;
+}
+
+.header__modal-input {
+  width: 100%;
+  @include fonts(500, 12, 1.29, null);
+  min-height: 30px;
+  color: $main-title-color;
+  padding-left: 10px;
+}
+
+.header__modal-form-textarea {
+  height: 100px;
+  width: 100%;
+}
+
+.header__modal-select {
+  width: 100%;
+  @include fonts(500, 12, 1.29, null);
+  min-height: 30px;
+  padding-left: 10px;
+  color: $main-title-color;
+}
+
+.header__modal-textarea {
+  width: 100%;
+  @include fonts(500, 12, 1.29, null);
+  color: $main-title-color;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.textarea {
+  height: 100%;
+}
+.header__modal-submit {
+  display: block;
+  margin-top: 20px;
+}
+.modal-submit {
+  margin-top: 0;
+}
+
+.modal-submit:hover {
+  color: $background-color;
 }
