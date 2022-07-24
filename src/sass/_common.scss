@@ -6,14 +6,13 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  //@include tablet {
-  //max-width: 768px;
-  //padding: 0 16px;
-  //}
-
-  //@include desktop {
-  //   max-width: 1200px;
-  //}
+  @include tablet {
+      max-width: 768px;
+    }
+  
+    @include desktop {
+      max-width: 1200px;
+    }
 }
 
 p,
