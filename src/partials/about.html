@@ -3,12 +3,39 @@
       <p class="about__pre-title">tradition and love</p>
       <h2 class="about__title">how it's made?</h2>
 
-      <img
-        src="./images/mob-cow-1x.png"
-        alt="cow and milk"
-        width="280"
-        height="279"
-      />
+    <div class="cow-list">
+      <div class="about-image-cow">
+
+        
+         <picture>
+           <source 
+              srsset="
+                 ./images/desk-cow.png 1x,
+                  ./images/desk-cow@2x.png 2x "
+                   media="(min-width:1200px)"
+                  />
+
+           <source 
+              srsset="./images/tab-cow.png 1x,
+                  ./images/tab-cow@2x.png 2x" 
+                   media="(min-width:768px)"
+                  />
+
+           <source 
+              srsset="
+                  ./images/mob-cow-1x.png 1x,
+                  ./images/mob-cow-2x.png 2x "
+                    media="(min-width:320px)"
+                  />
+            <img src="./images/mob-cow-1x.png" 
+                 alt="cow-and-milk"
+                 width="280"
+                  height="279" 
+                  />
+        </picture>
+          
+      </div>
+      <div class="about-content-cow">
       <div class="about-content__after">
         <p class="about-content__after-title">
           Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
@@ -33,6 +60,9 @@
           <use href="./images/sprite.svg#icon-ar"></use>
         </svg>
       </button>
+      </div>
+    </div>
+
     </div>
   </section>
 
@@ -40,19 +70,43 @@
   <div class="backdrop-about is-hidden" data-modal>
     <div class="modal-about">
       <button type="button" class="modal-about-btn" data-modal-close>
-        <svg class="about-icon" width="9" height="9">
+        <svg class="about-icon" width="14" height="14">
           <use href="./images/sprite.svg#icon-close"></use>
         </svg>
       </button>
       <h2 class="modal-about-title">
-      tradition and love
+      Tradition and love
       </h2>
       <p class="modal-about-text">Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
         Mauris rhoncus orci in imperdiet placerat.
         Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus.
         Cras massa nibh, tincidunt.
         Aliquam erat volutpat. Aenean accumsan.</p>
-      <img src="./images/mob-icecream-1x.png" alt="">
+        <picture>
+          <source 
+            srcset="./images/desk-icecream.png 1x, 
+                   ./images/desk-icecream@2x.png 2x"
+            media="(min-width:1200px)"      
+          />
+
+          <source 
+            srcset="./images/tab-icecream.png 1x, 
+                    ./images/tab-icecream@2x.png 2x"
+                     media="(min-width:768px)"
+                     />
+
+          <source 
+            srcset="./images/mob-icecream-1x.png 1x, 
+                    ./images/mob-icecream-2x.png 2x" 
+                    media="(min-width:320px)"
+                    />
+          <img src="./images/mob-icecream-1x.png" 
+               alt="ice"
+               width="280"
+              height="279" 
+          />
+        </picture>
+      
     </div>
   </div>
 
