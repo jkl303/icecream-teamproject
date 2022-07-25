@@ -98,13 +98,31 @@
   }
 }
 .products-item__first::before {
-  background-image: url(../images/mobile/mob-icecream-1x.png);
+  background-image: url(../images/mob-icecream-1x.png);
+  @include tablet {
+    background-image: url(../images/tab-icecream.png);
+  }
+  @include desktop {
+    background-image: url(../images/desk-icecream.png);
+  }
 }
 .products-item__scnd::before {
-  background-image: url(../images/mobile/mob-icecoffee-1x.png);
+  background-image: url(../images/mob-icecoffee-1x.png);
+  @include tablet {
+    background-image: url(../images/tab-icecoffee.png);
+  }
+  @include desktop {
+    background-image: url(../images/desk-icecoffee.png);
+  }
 }
 .products-item__thrd::before {
-  background-image: url(../images/mobile/mob-milkshakes-1x.png);
+  background-image: url(../images/mob-milkshakes-1x.png);
+  @include tablet {
+    background-image: url(../images/tab-milkshakes.png);
+  }
+  @include desktop {
+    background-image: url(../images/desk-milkshakes.png);
+  }
 }
 
 .products-item__title {
