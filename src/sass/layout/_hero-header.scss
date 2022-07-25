@@ -2,11 +2,6 @@
   background-color: $header-color;
 }
 
-.invisible {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .mobmenu.invisible {
   left: -100%;
   -webkit-transition: all ease-out 0.5s;
@@ -15,20 +10,55 @@
   transition: all ease-out 0.5s;
 }
 
+.btn-buy-tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    margin-left: auto;
+  }
+}
+
 .header__burger-open {
   width: 40px;
   height: 40px;
   background: transparent;
   border: none;
+  cursor: pointer;
+  @include tablet {
+    margin-left: 290px;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+  position: none;
 }
 
 .header__nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @include tablet {
+    justify-content: flex-start;
+    padding-top: 32px;
+  }
+  @include desktop {
+    padding-top: 37px;
+  }
 }
 
 .mob-menu {
@@ -36,14 +66,19 @@
   z-index: 100;
   top: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: $modal-bg-color;
-  left: 0px;
   -webkit-transition: all ease-out 0.5s;
   -moz-transition: all ease-out 0.5s;
   -o-transition: all ease-out 0.5s;
   transition: all ease-out 0.5s;
+  @include tablet {
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
 }
 
 .header__burger-close {
@@ -69,6 +104,10 @@
   line-height: calc(18 / 14);
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include tablet {
+    padding-left: 37px;
+    padding-right: 37px;
+  }
 }
 
 .buy-now:hover {
@@ -80,14 +119,23 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.buy-now-tablet {
+  margin-top: 0;
+  margin-left: 32px;
+}
+
 .icon-buy {
   margin-left: 16px;
 }
 .span-icon {
   margin-left: 15px;
+  text-align: center;
+  @include tablet {
+    margin-left: 12px;
+  }
 }
 
-.btn-indend {
+.btn-indent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +150,23 @@
   padding: 0;
 }
 
+.nav-menu__desktop {
+  display: none;
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 540px;
+    margin-left: 128px;
+  }
+}
+
+.nav-menu__desktop .nav-item__desktop {
+  border: none;
+  width: auto;
+}
+
 .nav-menu__link {
   font-weight: 700;
   font-size: 14px;
@@ -113,6 +178,10 @@
   padding-bottom: 12px;
   padding-left: 20px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+  }
 }
 
 .nav-menu__link:hover,
@@ -128,7 +197,10 @@
 // MODAL //
 
 .backdrop__header {
-  background: rgba(222, 35, 163, 0.404);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(139, 16, 100, 0.404);
   width: 100%;
   height: 100%;
 }
@@ -145,14 +217,20 @@
 .modal__header {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   width: 300px;
-  height: 580px;
+  height: 520px;
   z-index: 110;
   background-color: $ellipse-color;
   border-radius: 10px;
   transform: opacity(1) translateX(70%);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  @include tablet {
+    left: 60%;
+  }
+  @include desktop {
+    left: 74%;
+  }
 }
 
 .close-modal-btn {
@@ -180,8 +258,8 @@
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 30px;
-  gap: 15px;
+  margin-top: 10px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -196,15 +274,12 @@
   min-height: 30px;
   color: $main-title-color;
   padding-left: 10px;
-  border: none;
   border-radius: 10px;
 }
 
 .header__modal-form-textarea {
   height: 100px;
   width: 100%;
-  border: none;
-  border-radius: 10px;
 }
 
 .header__modal-select {
@@ -213,7 +288,6 @@
   min-height: 30px;
   padding-left: 10px;
   color: $main-title-color;
-  border: none;
   border-radius: 10px;
 }
 
@@ -226,8 +300,8 @@
 }
 .textarea {
   height: 100%;
-  resize: none;
   border-radius: 10px;
+  resize: none;
 }
 .header__modal-submit {
   display: block;
