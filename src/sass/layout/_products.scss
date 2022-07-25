@@ -1,11 +1,3 @@
-.container {
-  @include tablet {
-    padding: 0 32px;
-  }
-  @include desktop {
-    padding: 0 16px;
-  }
-}
 .products {
   padding: 60px 0;
 }
