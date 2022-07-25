@@ -1,4 +1,6 @@
 .footer {background-color: $background-color;
+    &>.container {@include tablet {padding: 0 16px;}
+}
     &__small-title {
     width: 232px;
     margin-bottom: 16px;
@@ -48,4 +50,8 @@
     &:hover, &:focus {background-color: $main-title-color;}}
 }
 
-.container--zero-padding {padding: 0;}
+.container--legal { 
+    @media screen and (max-width: 767px){
+    padding: 0;
+}
+}
