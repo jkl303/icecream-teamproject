@@ -194,130 +194,6 @@
   border: 1px solid #e18298;
 }
 
-// // HERO //
-
-// body {
-//   margin: 0;
-//   padding: 0;
-// }
-// .hero {
-//   width: 100%;
-//   height: 436px;
-//   background-color: #ffb8ca;
-// }
-
-// .hero-title {
-//   font-family: 'Titan One';
-//   @include fonts(400, 26px, 1.15, 0.04em);
-//   text-transform: uppercase;
-//   color: #ffffff;
-//   text-transform: uppercase;
-//   width: 218px;
-//   text-align: left;
-// }
-
-// .hero-second-title {
-//   font-style: normal;
-//   @include fonts(400, 48px, 0.96, null);
-//   color: #d41443;
-// }
-
-// .link-products {
-//   font-family: 'DM Sans';
-//   font-style: normal;
-//   @include fonts(400, 8px, 1.25, null);
-//   color: #ffffff;
-//   cursor: pointer;
-//   background-color: #d41443;
-//   width: 61.2px;
-//   height: 24px;
-//   border-radius: 20px;
-//   border: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   text-decoration: none;
-// }
-
-// .link-howitsmade {
-//   font-family: 'DM Sans';
-//   font-style: normal;
-//   @include fonts(400, 8px, 1.25, null);
-//   color: #d41443;
-//   cursor: pointer;
-//   background-color: #ffffff;
-//   width: 82.8px;
-//   height: 24px;
-//   border-radius: 20px;
-//   border: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   text-decoration: none;
-//   @include transition;
-//   &:hover,
-//   &:focus {
-//     background-color: #ecebeb;
-//   }
-// }
-
-// .circle-wraper {
-//   position: absolute;
-//   top: 83px;
-//   width: calc(100% - 20px);
-//   height: 100%;
-//   max-width: 354px;
-//   max-height: 352px;
-//   z-index: 1;
-//   overflow: hidden;
-// }
-
-// .circle-wraper .circle {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 50%;
-//   position: absolute;
-//   width: 346px;
-//   height: 344px;
-//   left: 0;
-//   top: 0;
-//   background: #ffa5ba;
-//   @include transition(box-shadow);
-//   &:hover,
-//   &:focus {
-//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-//   }
-// }
-
-// .ice-cream {
-//   background-image: url('../images/mobile/mob-icecream-hero-1x.png');
-//   background-repeat: no-repeat;
-//   background-size: auto;
-//   position: absolute;
-//   z-index: 2;
-//   width: 171px;
-//   height: 410px;
-//   top: 92px;
-//   object-fit: cover;
-// }
-
-// .hero-wrapper {
-//   position: absolute;
-//   z-index: 10;
-//   top: 194px;
-// }
-
-// .hero-link-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: 8px;
-// }
-
-// .hero-title-wrapper {
-//   margin-bottom: 20px;
-// }
-
 // MODAL //
 
 .backdrop__header {
@@ -437,4 +313,355 @@
 
 .modal-submit:hover {
   color: $background-color;
+}
+
+// HERO //
+
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.container {
+  margin: 0;
+}
+
+.hero {
+  width: 100%;
+  height: 436px;
+  background-color: #ffb8ca;
+  @include tablet {
+    height: 350px; //416px - 66px  общ выстота секции - header//
+  }
+  @include desktop {
+    height: 598px; //664px - 66px  общ выстота секции - header//
+
+  }
+}
+
+.hero-title {
+
+  @include fonts(400, 26px, 1.15, 0.04em);
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 218px;
+  text-align: left;
+  @include tablet {
+    width: 162px;
+    @include fonts(400, 22px, 1.14, 0.04em);
+    
+  }
+  @include desktop {
+    width: 277px;
+    @include fonts(400, 38px, 1.16, 0.04em)
+  
+  }
+}
+
+.hero-second-title {
+
+  @include fonts(400, 48px, 0.96, null);
+  color: #d41443;
+
+  @include tablet {
+    @include fonts(400, 34px, 0.9, 0.04em);
+  
+  }
+  @include desktop {
+    width: 277px;
+    @include fonts(400, 58px, 0.9, 0.04em)
+  }
+}
+
+.link-products {
+
+  @include fonts(400, 8px, 1.25, null);
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #d41443;
+  width: 61.2px;
+  height: 24px;
+  border-radius: 20px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  @include desktop {
+    width: 107px;
+    height: 40px;
+    @include fonts(400, 14px, 1.29, null)
+  }
+}
+
+.link-howitsmade {
+
+  @include fonts(400, 8px, 1.25, null);
+  color: #d41443;
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 82.8px;
+  height: 24px;
+  border-radius: 20px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+    // @include transition;
+  }
+    @include desktop {
+      width: 138px;
+      height: 40px;
+      @include fonts(400, 14px, 1.29, null)
+    }
+}
+
+.circle-wraper {
+  position: absolute;
+  width: calc(100% - 36px);
+  height: 100%;
+  max-width: 346px;
+  max-height: 344px;
+  z-index: 1;
+  overflow: hidden;
+  top: 83px;
+  left: calc(47.32% - 115.424px);
+
+  @include tablet {
+    width: 343px;
+    max-width: 343px;
+    max-height: 333px;
+    left: calc(60.35% - 215.5px);
+    top: 43px;
+  
+  }
+
+  @include desktop {
+      width: 534px;
+      max-width: 534px;
+      max-height: 534px;
+      left: 517px;
+      top: 54px;
+  
+  }
+
+}
+
+.circle-wraper .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  width: 346px;
+  height: 344px;
+  left: 0;
+  top: 0;
+  background: #ffa5ba;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+      0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+  }
+ 
+    @include tablet {
+      width: 335px;
+      max-width: 335px;
+      max-height: 333px;
+      // left: calc(60.35% - 215.5px);
+    }
+
+      @include desktop {
+        width: 534px;
+        height: 534px;
+        max-width: 534px;
+        max-height: 534px;
+      
+      }
+
+}
+
+.ice-cream {
+  background-image: url('../images/hero/mob-icecream-hero-1x.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  z-index: 2;
+  width: 171px;
+  height: 410px;
+  left: calc(45.76% - 29.432px); //117px;
+  top: 92px;
+  object-fit: cover;
+  @include transition;
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    }
+  
+
+  @include retina {
+    background-image: url('../images/hero/mob-icecream-hero-1x.png');
+  
+  }
+
+    @include tablet {
+      background-image: url('../images/hero/tab-icecream-hero.png');
+      width: 143px;
+      height: 336px;
+      top: 80px;
+      left: calc(61.33% - 149px);
+    
+    }
+      @include desktop {
+        background-image: url('../images/hero/desk-icecream-hero.png');
+        width: 236px;
+        height: 557px;
+        top: 108px;
+        left: 636px;
+
+      
+      }
+
+}
+
+.big-eco {
+
+  @include tablet {
+  background-image: url('../images/hero/tab-big-eco.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: absolute;
+  z-index: 2;
+  width: 152px;
+  height: 154px;
+  top: 246px;
+  left: 32px;
+  }
+
+  @include desktop {
+    background-image: url('../images/hero/desk-big-eco.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    z-index: 2;
+    width: 213px;
+    height: 216px;
+    top: 388px;
+    left: 16px;
+  }
+}
+
+.girl {
+
+  @include tablet {
+    background-image: url('../images/hero/tab-girl.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    z-index: 2;
+    width: 190px;
+    height: 150px;
+    top: 265px;
+    right: 32px;
+  }
+
+  @include desktop {
+    background-image: url('../images/hero/desk-girl.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    z-index: 2;
+    width: 304px;
+    height: 241px;
+    top: 423px;
+    right: 16px;
+  }
+}
+
+.hero-16 {
+
+  @include tablet {
+    background-image: url('../images/hero/tab-16.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    z-index: 2;
+    width: 43px;
+    height: 44px;
+    top: 92px;
+    right: 32px;
+  }
+
+  @include desktop {
+    background-image: url('../images/hero/desk-16.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    z-index: 2;
+    width: 72px;
+    height: 77px;
+    top: 152px;
+    right: 16px;
+  }
+}
+
+.hero-23 {
+    @include tablet {
+      background-image: url('../images/hero/tab-23.png');
+      background-repeat: no-repeat;
+      background-size: auto;
+      position: absolute;
+      z-index: 2;
+      width: 51px;
+      height: 43px;
+      top: 152px;
+      right: 32px;
+    }
+    
+    @include desktop {
+      background-image: url('../images/hero/desk-23.png');
+      background-repeat: no-repeat;
+      background-size: auto;
+      position: absolute;
+      z-index: 2;
+      width: 92px;
+      height: 76px;
+      top: 244px;
+      right: 16px;
+    }
+
+}
+
+.hero-wrapper {
+  position: absolute;
+  z-index: 10;
+  padding-top: 136px;
+  @include tablet {
+    padding-top: 36px;
+ 
+  }
+
+}
+
+.hero-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-title-wrapper {
+  margin-bottom: 20px;
 }
