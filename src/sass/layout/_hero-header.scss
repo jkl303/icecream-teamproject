@@ -499,7 +499,7 @@
   left: calc(45.76% - 29.432px); //117px;
   top: 92px;
   object-fit: cover;
-  @include transition;
+  @include transition(filter);
 
     &:hover,
     &:focus {
