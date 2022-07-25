@@ -99,29 +99,57 @@
 }
 .products-item__first::before {
   background-image: url(../images/mob-icecream-1x.png);
+  @include retina {
+    background-image: url(../images/mob-icecream-2x.png);
+  }
+
   @include tablet {
     background-image: url(../images/tab-icecream.png);
+    @include retina {
+      background-image: url(../images/tab-icecream@2x.png);
+    }
   }
   @include desktop {
     background-image: url(../images/desk-icecream.png);
+    @include retina {
+      background-image: url(../images/desk-icecream@2x.png);
+    }
   }
 }
 .products-item__scnd::before {
   background-image: url(../images/mob-icecoffee-1x.png);
+  @include retina {
+    background-image: url(../images/mob-icecoffee-2x.png);
+  }
   @include tablet {
     background-image: url(../images/tab-icecoffee.png);
+    @include retina {
+      background-image: url(../images/tab-icecoffee@2x.png);
+    }
   }
   @include desktop {
     background-image: url(../images/desk-icecoffee.png);
+    @include retina {
+      background-image: url(../images/desk-icecoffee@2x.png);
+    }
   }
 }
 .products-item__thrd::before {
   background-image: url(../images/mob-milkshakes-1x.png);
+  @include retina {
+    background-image: url(../images/mob-milkshakes-2x.png);
+  }
   @include tablet {
     background-image: url(../images/tab-milkshakes.png);
+    @include retina {
+      background-image: url(../images/tab-milkshakes@2x.png);
+    }
   }
   @include desktop {
     background-image: url(../images/desk-milkshakes.png);
+    @include retina {
+      background-image: url(../images/desk-milkshakes@2x.png);
+    }
   }
 }
 
