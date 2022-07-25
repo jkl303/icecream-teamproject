@@ -4,47 +4,133 @@
   background-color: $background-color;
   padding-top: 60px;
   padding-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+   padding-bottom: 60px;
+  }  
 }
 
 .about__pre-title {
   font-family: 'Titan One';
   text-align: center;
+  
+
   @include fonts(400, 18px, 1.16, null);
   color: $second-title-color;
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    line-height: 1.15;
+    }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+      line-height: 1.13;
+    }
 }
 
 .about__title {
   font-family: 'Titan One';
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
   @include fonts(400, 34px, 1.15, null);
   text-align: center;
   text-transform: uppercase;
   color: $main-title-color;
-
   margin-top: 15px;
   margin-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+      margin-top: 16px;
+      margin-bottom: 40px;
+      font-size: 48px;
+    }
+  @media screen and (min-width: 1200px) {
+       font-size: 58px;
+       line-height: 1.14;
+       margin-bottom: 60px;
+    }
+}
+
+.cow-list{
+  @media screen and (min-width: 768px) {
+     display: flex;
+     justify-content: center;
+    }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/desk-milk.png);
+    background-position: center;;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 30px ;
+  
+   @include retina {
+    background-image: url(../images/desk-milk@2x.png);
+    }
+    }
+        
+ }
+
+.about-image-cow{
+  @media screen and (min-width: 768px) {
+   margin-right: 32px;
+    }
+
+   @media screen and (min-width: 1200px) {
+   margin-right: 99px;   
+    }
+}
+
+.about-content-cow{
+  @media screen and (min-width: 1200px) {
+     padding-top: 90px;
+    }
 }
 
 .about-content-bckg {
   width: 100%;
-  background-image: url(../images/mobile/mob-milk-1x.png);
+  background-image: url(../images/mob-milk-1x.png);
   background-repeat: no-repeat;
   background-size: contain;
+
   @include retina {
-    background-image: url(../images/mobile/mob-milk-2x.png);
+    background-image: url(../images/mob-milk-2x.png);
   }
+
+  @media screen and (min-width: 768px) {
+  background-image:none
+  }     
 }
 
 .about-content__after {
   margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+     margin-top: 0;
+     margin-bottom: 40px;
+    }
 }
 
 .about-content__after-title {
   @include fonts(500, 12px, 1.62, 0.04em);
   color: #000000;
   width: 220px;
+
+  @media screen and (min-width: 768px) {
+     width:334px;
+     font-size: 14px;
+     line-height: 1.78;
+    }
+
+  @media screen and (min-width: 1200px) {
+     width: 463px;
+     font-size: 16px;
+     line-height: 1.75;
+    }
 }
 
 .about-content__after-text {
@@ -54,6 +140,19 @@
   padding-top: 40px;
   margin-bottom: 20px;
   position: relative;
+
+  @media screen and (min-width: 768px) {
+      width: 334px;
+      font-size: 14px;
+      line-height: 1.78;
+      margin-bottom: 0;
+    }
+
+  @media screen and (min-width: 1200px) {
+    width: 463px;
+    line-height: 1.92;
+    padding-top: 32px;
+   }
 }
 
 .about-content__btn {
@@ -70,6 +169,11 @@
   border-radius: 22px;
   border: transparent;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 1.3;
+    }
 }
 
 .about-content__btn:hover,
@@ -78,7 +182,7 @@
 }
 .about-content__btn {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
@@ -103,26 +207,38 @@
 }
 
 .modal-about {
-  display: block;
-  padding: 20px;
+  border-radius: 15px;
   position: absolute;
-  top: 50%;
+   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 100%;
-  max-width: 320px;
-  min-height: 570px;
-  background-color: #ffb8cae2;
+  padding: 20px;
+   transform: translate(-50%, -50%) scale(1);
+  width: 300px;
+  min-height: 600px;
+  background-color: $background-color;
   border-radius: 5px;
   transition: transform 300ms linear;
+
+  @media screen and (min-width: 768px) {
+      width: 544px;
+      min-height: 600px;
+      padding: 50px;
+    }
+
+  @media screen and (min-width: 1200px) {
+      width: 544px;
+      min-height: 600px;
+      padding: 30px;
+    }
 }
 
 .modal-about-btn {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
   border: 1px $main-title-color;
   border-radius: 50%;
   background-color: transparent;
@@ -133,9 +249,15 @@
 
 .modal-about-btn:hover,
 .modal-about-btn:focus {
-  color: $background-color ;
-  outline: transparent;
-  border-color: $background-color;
+  background-color: $header-color;
+}
+.modal-about-btn {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-icon:hover{
+  fill:currentColor
 }
 
 .is-hidden {
@@ -147,14 +269,32 @@
 .modal-about-text {
   margin: 0;
   @include fonts(700, 14, 1.28, null);
-  color: $main-title-color;
+  color: $text-color;
 }
 
 .modal-about-title {
   font-family: 'Titan One';
   text-align: center;
+  margin-bottom: 10px;
   
-  @include fonts(400, 18px, 1.16, null);
-  color: rgba(113, 69, 69, 0.926);
-
+  @include fonts(400, 21px, 18px, null);
+  color:$main-title-color;
+  @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-style: 30px;
+    }
 }
+
+.float{
+  @media screen and (min-width: 768px) {
+    float: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+  float: left;
+  }
+  }
+  
