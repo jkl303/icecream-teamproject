@@ -19,9 +19,11 @@
 
   margin-bottom: 32px;
   @include tablet {
-    margin-bottom: 60px;
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+
+    margin-bottom: 60px;
   }
 }
 .brunches__card {
@@ -31,10 +33,6 @@
   padding: 40px 32px;
   background-color: #fff;
   width: 100%;
-
-  @include tablet {
-    width: calc((100% - 64px) / 3);
-  }
 
   @include desktop {
     padding: 40px;
