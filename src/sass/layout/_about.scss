@@ -10,11 +10,10 @@
   }  
 }
 
-
-
 .about__pre-title {
   font-family: 'Titan One';
   text-align: center;
+  
 
   @include fonts(400, 18px, 1.16, null);
   color: $second-title-color;
@@ -35,6 +34,7 @@
 
 .about__title {
   font-family: 'Titan One';
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   @include fonts(400, 34px, 1.15, null);
   text-align: center;
@@ -61,31 +61,34 @@
      justify-content: center;
     }
 
-     @media screen and (min-width: 1200px) {
-       background-image: url(../images/desk-milk.png);
-       background-position: center;;
-       background-size: cover;
-       background-repeat: no-repeat;
-       padding:30px;
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/desk-milk.png);
+    background-position: center;;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 30px ;
   
-       @include retina {
-         background-image: url(../images/desk-milk@2x.png);
-       }
-     }
+   @include retina {
+    background-image: url(../images/desk-milk@2x.png);
+    }
+    }
         
  }
 
 .about-image-cow{
-     @media screen and (min-width: 768px) {
-      margin-right: 32px;
-       }
+  @media screen and (min-width: 768px) {
+   margin-right: 32px;
+    }
 
-      @media screen and (min-width: 1200px) {
-       margin-right: 99px;  
-           
-       }
+   @media screen and (min-width: 1200px) {
+   margin-right: 99px;   
+    }
+}
 
-
+.about-content-cow{
+  @media screen and (min-width: 1200px) {
+     padding-top: 90px;
+    }
 }
 
 .about-content-bckg {
@@ -98,9 +101,9 @@
     background-image: url(../images/mob-milk-2x.png);
   }
 
-    @media screen and (min-width: 768px) {
-    background-image:none
-    }     
+  @media screen and (min-width: 768px) {
+  background-image:none
+  }     
 }
 
 .about-content__after {
@@ -123,10 +126,10 @@
      line-height: 1.78;
     }
 
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
      width: 463px;
-       font-size: 16px;
-       line-height: 1.75;
+     font-size: 16px;
+     line-height: 1.75;
     }
 }
 
@@ -145,11 +148,11 @@
       margin-bottom: 0;
     }
 
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 463px;
-      line-height: 1.92;
-      padding-top: 32px;
-     }
+    line-height: 1.92;
+    padding-top: 32px;
+   }
 }
 
 .about-content__btn {
@@ -179,12 +182,11 @@
 }
 .about-content__btn {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon {
   margin-left: 14px;
-
 }
 
 /*Модальное окно*/
@@ -211,36 +213,35 @@
   left: 50%;
   padding: 20px;
    transform: translate(-50%, -50%) scale(1);
-  // width: 100%;
   width: 300px;
   min-height: 600px;
   background-color: $background-color;
   border-radius: 5px;
   transition: transform 300ms linear;
 
-
   @media screen and (min-width: 768px) {
       width: 544px;
       min-height: 600px;
-  padding: 50px;
+      padding: 50px;
     }
+
   @media screen and (min-width: 1200px) {
       width: 544px;
       min-height: 600px;
-      padding: 50px;
+      padding: 30px;
     }
 }
 
 .modal-about-btn {
   position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-   width: 35px;
-   height: 35px;
-   border: 1px $main-title-color;
-   border-radius: 50%;
-   background-color: transparent;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  border: 1px $main-title-color;
+  border-radius: 50%;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,14 +253,12 @@
 }
 .modal-about-btn {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-icon:hover{
   fill:currentColor
 }
-
-
 
 .is-hidden {
   opacity: 0;
@@ -270,15 +269,32 @@
 .modal-about-text {
   margin: 0;
   @include fonts(700, 14, 1.28, null);
-  color: $main-title-color;
+  color: $text-color;
 }
 
 .modal-about-title {
   font-family: 'Titan One';
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   
-  @include fonts(400, 40px, 1.16, null);
-  color: rgba(113, 69, 69, 0.926);
-
+  @include fonts(400, 21px, 18px, null);
+  color:$main-title-color;
+  @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      font-style: 30px;
+    }
 }
+
+.float{
+  @media screen and (min-width: 768px) {
+    float: left;
+  }
+
+  @media screen and (min-width: 1200px) {
+  float: left;
+  }
+  }
+  
