@@ -1,6 +1,15 @@
 .brunches {
   background-image: linear-gradient(#fff 20%, $background-color 20%);
   padding-bottom: 40px;
+
+  @include tablet {
+    background-image: linear-gradient(#fff 40%, $background-color 40%);
+  }
+
+  @include desktop {
+    padding-bottom: 121px;
+    background-image: linear-gradient(#fff 10%, $background-color 10%);
+  }
 }
 
 .brunches__list {
@@ -26,6 +35,10 @@
   @include tablet {
     width: calc((100% - 64px) / 3);
   }
+
+  @include desktop {
+    padding: 40px;
+  }
 }
 
 .brunches__point {
@@ -50,12 +63,19 @@
 
   @include tablet {
     margin-bottom: 32px;
+
+    width: 73px;
+    height: 28px;
   }
 }
 
 .brunches__point--green {
   background-color: #c2e297;
   width: 130px;
+
+  @include tablet {
+    width: 138px;
+  }
 }
 
 .brunches__sity {
@@ -133,6 +153,12 @@
   font-size: 12px;
   line-height: 1.5;
   color: $text-color;
+  @include transition($property: color);
+
+  &:hover,
+  &:focus {
+    color: $main-title-color;
+  }
 }
 
 .brunches__btns {
@@ -166,6 +192,8 @@
 
   color: #ffffff;
 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
   svg {
     position: relative;
     top: 1px;
@@ -176,7 +204,16 @@
     }
   }
 
+  @include transition($property: background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $modal-bg-color;
+  }
   @include tablet {
+    width: 192px;
+  }
+  @include desktop {
     width: 198px;
   }
 }
@@ -203,6 +240,14 @@
 
   color: $main-title-color;
 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @include transition($property: background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $second-title-color;
+  }
   svg {
     position: relative;
     top: 1px;
@@ -213,6 +258,10 @@
     }
   }
   @include tablet {
+    width: 174px;
+  }
+
+  @include desktop {
     width: 168px;
   }
 }
@@ -244,6 +293,10 @@
       opacity: 0;
     }
   }
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .modal {
@@ -262,6 +315,15 @@
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    max-width: 400px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+  }
 }
 
 .close-button {
