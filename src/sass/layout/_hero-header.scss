@@ -317,25 +317,22 @@
 
 // HERO //
 
-// body {
-//   margin: 0;
-//   padding: 0;
-// }
-
-.container {
+.hero > .container {
   margin: 0;
+
 }
 
 .hero {
   width: 100%;
   height: 436px;
   background-color: #ffb8ca;
+
   @include tablet {
     height: 350px; //416px - 66px  общ выстота секции - header//
   }
+
   @include desktop {
     height: 598px; //664px - 66px  общ выстота секции - header//
-
   }
 }
 
@@ -346,6 +343,7 @@
   color: #ffffff;
   width: 218px;
   text-align: left;
+
   @include tablet {
     width: 162px;
     @include fonts(400, 22px, 1.14, 0.04em);
@@ -466,20 +464,18 @@
   top: 0;
   background: #ffa5ba;
 
-  @include transition;
+  //  @include transition;
 
-  &:hover,
-  &:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-      0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-  }
+  // &:hover,
+  // &:focus {
+  //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+  //     0px 4px 4px rgba(0, 0, 0, 0.25); 
+  // }
  
     @include tablet {
       width: 335px;
       max-width: 335px;
       max-height: 333px;
-      // left: calc(60.35% - 215.5px);
     }
 
       @include desktop {
@@ -646,12 +642,19 @@
 }
 
 .hero-wrapper {
+  
   position: absolute;
   z-index: 10;
-  padding-top: 136px;
+  top: 194px;
+
+
   @include tablet {
-    padding-top: 36px;
- 
+    top: 102px;
+
+  }
+  @include desktop {
+    top: 147px;
+  
   }
 
 }
@@ -665,3 +668,39 @@
 .hero-title-wrapper {
   margin-bottom: 20px;
 }
+
+// .hero-text {
+//   display: none;
+//   @include tablet {
+//   position: absolute;
+//   z-index: 2;
+//   width: 114px;
+//   height: 48px;
+//   top: 287px;
+//   left: 184px;
+//   @include fonts(400, 8px, 1.5, null);
+//   text-align: left;
+//   color: #fff;
+//   }
+
+// }
+
+// .hero-button {
+//     display: none;
+    
+//     @include tablet {
+//       position: absolute;
+//       z-index: 2;
+//       left: 50%;
+//       transform: translateX(-50%);
+//       width: 18px;
+//       height: 18px;
+      
+//       cursor: pointer;
+//       background-color: #fff;
+      
+//       color: $main-title-color;
+//       border-radius: 50%;
+//       border: none; 
+//     }
+// }
