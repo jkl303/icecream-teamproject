@@ -5,12 +5,20 @@
   position: relative;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   @include tablet {
-    display: flex;
+    // display: flex;
+    // gap: 16px;
+    display: grid;
+    grid-template-columns: 224px 224px 224px;
+    grid-template-rows: 611px;
     gap: 16px;
   }
   @include desktop {
+    // gap: 32px;
+    // align-items: flex-end;
+    display: grid;
+    grid-template-columns: 368px 368px 368px;
+    grid-template-rows: 796px;
     gap: 32px;
-    align-items: flex-end;
   }
 }
 
@@ -55,8 +63,6 @@
   width: 280px;
   border-radius: 24px;
   @include tablet {
-    // margin-top: calc(224px / 2);
-
     width: 224px;
   }
   @include desktop {
