@@ -403,7 +403,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  @include transition (background-color);
+  @include transition;
 
   &:hover,
   &:focus {
