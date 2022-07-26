@@ -1,4 +1,4 @@
-  <header class="header" id="home">
+  <header class="header" id="header">
       <div class="container">
         <div class="header__nav-mobile">
           <picture>
@@ -12,11 +12,11 @@
           </button>
           <div class="header__nav-list">
             <ul class="nav-menu__list nav-menu__desktop">
-                    <li class="nav-menu__item nav-item__desktop"><a href="#home" class="nav-menu__link">Home</a></li>
-                    <li class="nav-menu__item nav-item__desktop"><a href="#about" class="nav-menu__link">About us</a></li>
-                    <li class="nav-menu__item nav-item__desktop"><a href="#tradition" class="nav-menu__link">How it’s made?</a></li>
-                    <li class="nav-menu__item nav-item__desktop"><a href="#products" class="nav-menu__link">Our products</a></li>
-                    <li class="nav-menu__item nav-item__desktop"><a href="#contact" class="nav-menu__link">Contact</a></li>
+                    <li class="nav-menu__item nav-item__desktop"><a href="#header" class="nav-menu__link">Home</a></li>
+                    <li class="nav-menu__item nav-item__desktop"><a href="#tradition" class="nav-menu__link">About us</a></li>
+                    <li class="nav-menu__item nav-item__desktop"><a href="#products" class="nav-menu__link">How it’s made?</a></li>
+                    <li class="nav-menu__item nav-item__desktop"><a href="#contact" class="nav-menu__link">Our products</a></li>
+                    <li class="nav-menu__item nav-item__desktop"><a href="#footer" class="nav-menu__link">Contact</a></li>
                 </ul>
           </div>
           <div class="btn-buy-tablet">
@@ -44,11 +44,11 @@
               </button>
             </div>
             <ul class="nav-menu__list">
-                    <li class="nav-menu__item"><a href="#hero" class="nav-menu__link">Home</a></li>
-                    <li class="nav-menu__item"><a href="#about" class="nav-menu__link">About us</a></li>
-                    <li class="nav-menu__item"><a href="#products" class="nav-menu__link">How it’s made?</a></li>
-                    <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Our products</a></li>
-                    <li class="nav-menu__item"><a href="#footer" class="nav-menu__link">Contact</a></li>
+                    <li class="nav-menu__item"><a href="header" class="nav-menu__link">Home</a></li>
+                    <li class="nav-menu__item"><a href="#id-about" class="nav-menu__link">About us</a></li>
+                    <li class="nav-menu__item"><a href="#tradition" class="nav-menu__link">How it’s made?</a></li>
+                    <li class="nav-menu__item"><a href="#products" class="nav-menu__link">Our products</a></li>
+                    <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Contact</a></li>
                 </ul>
           </div>
         </div>
@@ -133,11 +133,21 @@
                 <textarea name="comments" id="comments" cols="20" rows="10" class="header__modal-textarea textarea" placeholder="Write here"></textarea>
               </div>
               <div class="header__modal-submit">
-                <button type="submit" class="buy-now modal-submit"><span class="submit-btn">Submit</span></button>
+                <button type="submit" class="modal-submit">Submit</button>
               </div>
             </form>
           </div>
+          
          </div>
+         <div class="modal-thanks invisible">
+            <button type="button" class="btn-thanks close-modal-thanks">
+              <svg class="close-menu-icon" width="14" height="14">
+                <use href="./icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <p class="thanks-text">Thanks for your choice</p>
+          </div>
     <script type="module" src="./js/modal.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
     <script type="module" src="./js/modal-mob-menu.js"></script>
+    <script type="module" src="./js/modal-thanks.js"></script>
