@@ -2,6 +2,14 @@
   background-color: $header-color;
 }
 
+// .modal__header::-webkit-scrollbar {
+//   width: 0 !important;
+// }
+
+// .mob-menu::-webkit-scrollbar {
+//   width: 0 !important;
+// }
+
 .mobmenu.invisible {
   left: -100%;
   -webkit-transition: all ease-out 0.5s;
@@ -34,6 +42,15 @@
   }
 }
 
+.close-menu-icon {
+  fill: $background-color;
+}
+
+.close-menu-icon:hover,
+.close-menu-icon:focus {
+  fill: $main-title-color;
+}
+
 .invisible {
   opacity: 0;
   visibility: hidden;
@@ -52,6 +69,7 @@
   padding-bottom: 8px;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 10;
   @include tablet {
     justify-content: flex-start;
     padding-top: 32px;
@@ -63,11 +81,13 @@
 
 .mob-menu {
   position: absolute;
-  z-index: 100;
+  z-index: 40;
   top: 0;
   right: 0;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   background-color: $modal-bg-color;
   -webkit-transition: all ease-out 0.5s;
   -moz-transition: all ease-out 0.5s;
@@ -87,22 +107,25 @@
   top: 20px;
   right: 20px;
   border: none;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buy-now {
+  @include fonts(700, 16, 1.31, null);
+  display: flex;
   height: 44px;
   margin-top: 60px;
-  background-color: $background-color;
+  background-color: #ffffff;
   align-items: center;
   color: $main-title-color;
   text-align: center;
   padding-left: 49px;
   padding-right: 49px;
   border-radius: 22px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(18 / 14);
+
   border: none;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @include tablet {
     padding-left: 37px;
@@ -110,18 +133,31 @@
   }
 }
 
-.buy-now:hover {
-  background: $main-title-color;
+.buy-now-icon {
+  fill: $main-title-color;
 }
 
-.buy-now:hover .buy-now-span {
-  color: #ffffff;
+.buy-now:hover,
+.buy-now:focus {
+  background: $second-btn-bcg;
+}
+
+.buy-now:hover .buy-now-span,
+.buy-now:focus .buy-now-span {
+  color: $main-title-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.buy-now:hover .buy-now-icon,
+.buy-now:focus .buy-now-icon {
+  fill: $main-title-color;
+}
+
 .buy-now-tablet {
+  display: flex;
   margin-top: 0;
   margin-left: 32px;
+  cursor: pointer;
 }
 
 .icon-buy {
@@ -130,6 +166,7 @@
 .span-icon {
   margin-left: 15px;
   text-align: center;
+  padding-top: 3px;
   @include tablet {
     margin-left: 12px;
   }
@@ -148,10 +185,12 @@
 .nav-menu__list {
   margin-top: 19px;
   padding: 0;
+  @include fonts(700, 14, 1.29, null);
 }
 
 .nav-menu__desktop {
   display: none;
+  @include fonts(700, 16, 1.31, null);
   @include desktop {
     display: flex;
     justify-content: center;
@@ -203,6 +242,7 @@
   background: rgba(139, 16, 100, 0.404);
   width: 100%;
   height: 100%;
+  z-index: 50;
 }
 
 .backdrop__header.invisible {
@@ -223,6 +263,7 @@
   z-index: 110;
   background-color: $ellipse-color;
   border-radius: 10px;
+  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
   transform: opacity(1) translateX(70%);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   @include tablet {
@@ -239,6 +280,8 @@
   right: 20px;
   background: transparent;
   border: none;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -270,6 +313,7 @@
 
 .header__modal-input {
   width: 100%;
+  border: none;
   @include fonts(500, 12, 1.29, null);
   min-height: 30px;
   color: $main-title-color;
@@ -284,6 +328,7 @@
 
 .header__modal-select {
   width: 100%;
+  border: none;
   @include fonts(500, 12, 1.29, null);
   min-height: 30px;
   padding-left: 10px;
@@ -302,6 +347,7 @@
   height: 100%;
   border-radius: 10px;
   resize: none;
+  border: none;
 }
 .header__modal-submit {
   display: block;
@@ -313,6 +359,12 @@
 
 .modal-submit:hover {
   color: $background-color;
+}
+
+
+.modal-sumbit:hover .submit-btn,
+.modal-submit:focus .submit-btn {
+  color: $main-title-color;
 }
 
 // HERO //
@@ -741,7 +793,13 @@
       
       cursor: pointer;
       background-color: #fff;
-      
+
+//       color: $main-title-color;
+//       border-radius: 50%;
+//       border: none; 
+//     }
+// }
+
       fill: #D41443;
       border-radius: 50%;
       border: none;
@@ -787,4 +845,3 @@
         transition-duration: 1s;
         color: #D41443;
           }
-        
