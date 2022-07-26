@@ -1,57 +1,89 @@
-.footer {background-color: $background-color;
-    &>.container {@include tablet {padding: 0 16px;}
-}
-    &__small-title {
-    width: 232px;
-    margin-bottom: 16px;
-
-    font-family: 'Titan One';
-    @include fonts(400, 18px, 1.17, null);
-    text-transform: uppercase;
-    color: $second-title-color;
-}
-    &__big-title {
-    width: 200px;
-    margin-bottom: 40px;
-
-    font-family: 'Titan One';
-    @include fonts(400, 34px, 1.15, 0.04em);
-    text-transform: uppercase;
-    color: $main-title-color;
-}
-    &__contact {
-    width: 230px;
-    margin: 40px 0 40px auto;
-
-    font-family: 'DM Sans';
-    @include fonts(700, 12px, 1.86, null);
+.footer {
+    background-color: $background-color;
+    & .container__flex {padding-bottom: 40px;
+        @include tablet {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 16px 40px;}
+        @include desktop {padding: 81px 16px 60px;}}
+    &__titles {width: 232px;
+        margin-bottom: 40px;
+        @include tablet {width: 340px;
+        margin: 0;}
+        @include desktop {width: 480px;}
     }
-    &__tel {text-decoration: none;
-    color: $main-title-color;}
-    &__legal {padding: 16px 20px 3px;
+    &__small-title {
+        margin-bottom: 16px;
+
+        font-family: 'Titan One';
+        @include fonts(400, 18px, 1.17, null);
+        text-transform: uppercase;
+        color: $second-title-color;
+        @include tablet {
+            @include fonts(400, 26px, 1.15, 0.04em);}
+        @include desktop {@include fonts(400, 30px, 1.13, 0.04em);}
+    }
+
+    &__big-title {
+        font-family: 'Titan One';
+        @include fonts(400, 34px, 1.15, 0.04em);
+        text-transform: uppercase;
+        color: $main-title-color;
+        @include tablet {@include fonts(400, 48px, 1.15, 0.06em);}
+        @include desktop {@include fonts(400, 58px, 1.13, 0.06em);}
+    }
+    &__contacts {align-self: flex-end;}
+    &__contact {text-align: end;
+        margin: 40px 0 0 auto;
+        
+        font-family: 'DM Sans';
+        @include fonts(700, 12px, 1.86, null);
+        @include tablet {
+            font-size: 14px;}
+        @include desktop {@include fonts(700, 16px, 1.86, 0.02em);}
+    }
+
+    &__tel {
+        text-decoration: none;
+        color: $main-title-color;
+    }
+
+    &__legal {
+        padding: 16px 20px 3px;
         border-top: 1px solid #E1E1E1;
-        &-text {padding: 0 70px;
+
+        &-text {
+            padding: 0 70px;
             @include fonts(700, 14px, 1.52, null);
-        color: $text-color;
-        text-align: center;
-    }}
+            color: $text-color;
+            text-align: center;
+        }
+    }
 }
 
-.socials {display: flex;
+.socials {
+    display: flex;
     flex-direction: row-reverse;
     gap: 28.24px;
-    &__link {display: block;
-    width:32px;
-    height: 32px;
-    background-color: $socials-color;
-    border-radius: 50%;
-    fill: #fff;
-    @include transition;
-    &:hover, &:focus {background-color: $main-title-color;}}
+    @include tablet {gap: 30px;}
+
+    &__link {
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-color: $socials-color;
+        border-radius: 50%;
+        fill: #fff;
+        @include transition;
+
+        &:hover,
+        &:focus {
+            background-color: $main-title-color;
+        }
+    }
 }
 
-.container--legal { 
-    @media screen and (max-width: 767px){
+.container--legal {
     padding: 0;
-}
+    @include tablet {padding: 0 16px;}
 }
