@@ -6,12 +6,19 @@ new Swiper('.slider', {
 
     pagination: {
         el: '.swiper-pagination',
-        clickable: true
+        clickable: true,
+        speed: 1000
     },
-
-    slidesPerGroup: 1,
 
     centeredSlides: true,
 
-    spaceBetween: 20,
+    effect: 'fade',
+
+    fadeEffect: {
+        crossFade: true,
+        speed:1000,
+        loop: true
+    },
+
+    grabCursor:true,
 }); 
