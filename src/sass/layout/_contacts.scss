@@ -1,17 +1,41 @@
 .brunches {
   background-image: linear-gradient(#fff 20%, $background-color 20%);
   padding-bottom: 40px;
+
+  @include tablet {
+    background-image: linear-gradient(#fff 40%, $background-color 40%);
+  }
+
+  @include desktop {
+    padding-bottom: 121px;
+    background-image: linear-gradient(#fff 10%, $background-color 10%);
+  }
 }
 
+.brunches__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin-bottom: 32px;
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+
+    margin-bottom: 60px;
+  }
+}
 .brunches__card {
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 24px;
 
   padding: 40px 32px;
   background-color: #fff;
+  width: 100%;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @include desktop {
+    padding: 40px;
   }
 }
 
@@ -34,11 +58,22 @@
   border-radius: 4px;
 
   margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 32px;
+
+    width: 73px;
+    height: 28px;
+  }
 }
 
 .brunches__point--green {
   background-color: #c2e297;
   width: 130px;
+
+  @include tablet {
+    width: 138px;
+  }
 }
 
 .brunches__sity {
@@ -50,6 +85,9 @@
   letter-spacing: 0.04em;
 
   margin-bottom: 8px;
+  @include tablet {
+    margin-bottom: 12px;
+  }
 }
 
 .brunches__text {
@@ -61,6 +99,10 @@
   color: $text-color;
 
   margin-bottom: 24px;
+
+  @include tablet {
+    margin-bottom: 32px;
+  }
 }
 
 .scheduele-box {
@@ -69,6 +111,11 @@
 
   padding: 24px 0;
   margin-bottom: 24px;
+
+  @include tablet {
+    padding: 32px 0;
+    margin-bottom: 32px;
+  }
 }
 
 .schedule-days {
@@ -87,6 +134,10 @@
   color: $ellipse-color;
 
   margin-bottom: 8px;
+
+  @include tablet {
+    margin-bottom: 12px;
+  }
 }
 
 .schedule-houres--reset {
@@ -100,16 +151,29 @@
   font-size: 12px;
   line-height: 1.5;
   color: $text-color;
+  @include transition($property: color);
+
+  &:hover,
+  &:focus {
+    color: $main-title-color;
+  }
+}
+
+.brunches__btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  @include tablet {
+    gap: 14.5;
+  }
 }
 
 .modal-location {
   position: relative;
 
-  text-decoration: none;
   width: 161.45px;
   height: 44px;
-
-  margin: 32px auto 10px;
 
   background: #d41342;
   border-radius: 22px;
@@ -119,13 +183,14 @@
   align-items: center;
   justify-content: center;
 
-  font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
 
   color: #ffffff;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   svg {
     position: relative;
@@ -136,6 +201,19 @@
       width: 100%;
     }
   }
+
+  @include transition($property: background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $modal-bg-color;
+  }
+  @include tablet {
+    width: 192px;
+  }
+  @include desktop {
+    width: 198px;
+  }
 }
 
 .modal-franchise {
@@ -143,8 +221,6 @@
   cursor: pointer;
   width: 161.45px;
   height: 44px;
-
-  margin: 32px auto 10px;
 
   background-color: #fff;
   border-radius: 22px;
@@ -162,6 +238,14 @@
 
   color: $main-title-color;
 
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @include transition($property: background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $second-title-color;
+  }
   svg {
     position: relative;
     top: 1px;
@@ -170,6 +254,13 @@
     use {
       width: 100%;
     }
+  }
+  @include tablet {
+    width: 174px;
+  }
+
+  @include desktop {
+    width: 168px;
   }
 }
 
@@ -200,6 +291,10 @@
       opacity: 0;
     }
   }
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .modal {
@@ -218,6 +313,15 @@
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    max-width: 400px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+  }
 }
 
 .close-button {

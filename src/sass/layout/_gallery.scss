@@ -1,6 +1,20 @@
 .gallery{background-image: linear-gradient(
     to bottom, #FFF5F6 27px, #FAFAFA 27px);
-   }
+    @include tablet {background-image: linear-gradient(
+        to bottom, #FFF5F6 187px, #FAFAFA 187px)}
+        @include desktop{
+background-image: linear-gradient(
+        to bottom, #FFF5F6 90px, #FAFAFA 90px)}}
+
+.gallery-container{width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            padding: 0;
+            @include tablet {
+                max-width: 768px;}
+     @include desktop {
+              max-width: 1200px;
+              padding: 0 93px;}}
 
 .gallery__list { display: grid;
 grid-template-columns: repeat(7, 44px);
@@ -8,32 +22,71 @@ grid-template-rows: repeat(3, 44px);
 grid-row-gap: 2px;
 grid-column-gap: 2px;
 position:relative;
-}
+@include tablet {grid-template-columns: repeat(7, 105px);
+    grid-template-rows: repeat(3, 105px);
+    grid-row-gap: 6px;
+    grid-column-gap: 6px;}
+    @include desktop {grid-template-columns: repeat(7, 138px);
+        grid-template-rows: repeat(3, 138px);
+        grid-row-gap: 8px;
+        grid-column-gap: 8px;}}
 
 .gallery__item>img {display: block;
     position: absolute;
     width: 100%;
+    min-width: 44px;
     height: 100%;
-    border-radius: 8px;
-    } 
-    
-.gallery__item--big {grid-column: span 2;
-grid-row: span 2;}
-.gallery__item {position:relative;}
-.gallery__item.two,.gallery__item.seven {top: 28px;}
+    @include tablet {min-width: 105px;}
+    @include desktop {min-width: 138px;}
+        } 
+
+    .gallery__item:hover, .gallery__item:focus {
+        transform: scale(1.2);
+        position: relative;
+        z-index: 2;
+            }
 
 .gallery__item.eight{
-    grid-column: 3 ;
-    grid-row: 3;}
-    .gallery__item.seven{ grid-column: 2 ;
-        grid-row: 2;}
-    .gallery__item.nine{grid-column: 5 ;
-        grid-row: 2;}
-    .gallery__item.ten{grid-column: 6 ;
-        grid-row: 2;}
-        .gallery__item.one{top: 45px;
-    left: 0;}
-    .gallery__item.nine,.gallery__item.four{top: 31px;}
-    .gallery__item.ten,.gallery__item.five{top: 21px;}
-    .gallery__item.six{top: 49px;}
-    .gallery__item--big,.gallery__item.eight{top: 0px;}
+        grid-column: 3 ;
+        grid-row: 3;}
+         .gallery__item.seven{ grid-column: 2 ;
+            grid-row: 2;}
+        .gallery__item.nine{grid-column: 5 ;
+            grid-row: 2;}
+        .gallery__item.ten{grid-column: 6 ;
+            grid-row: 2;}
+
+.big {grid-column: span 2;
+grid-row: span 2;
+position:relative;
+    border-radius: 8px;
+    @include tablet {border-radius: 20px;}}
+
+.gallery__item {position:relative;
+    border-radius: 8px;
+    overflow: hidden;
+        @include transition (transform);
+    @include tablet {border-radius: 20px;}
+}
+
+.gallery__item.one{top: 45px;
+    left: 0;
+    @include tablet {top: 108px;}
+    @include desktop {top: 143px;}}
+
+.gallery__item.two,.gallery__item.seven {top: 28px;
+@include tablet {top: 67px;}
+@include desktop {top: 90px;}}
+
+.gallery__item--big,.gallery__item.eight{top: 0px;}
+
+.gallery__item.four, .gallery__item.nine{top: 31px;
+        @include tablet {top: 75px;}}
+    .gallery__item.five, .gallery__item.ten {top: 21px;
+        @include tablet {top: 50px;}
+        @include desktop {top: 100px;}}
+
+    .gallery__item.six{top: 49px;
+        @include tablet {top: 115px;}
+        @include desktop {top: 153px;}}
+    

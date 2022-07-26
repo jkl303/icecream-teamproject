@@ -3,6 +3,23 @@
 }
 .products-list {
   position: relative;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @include tablet {
+    // display: flex;
+    // gap: 16px;
+    display: grid;
+    grid-template-columns: 224px 224px 224px;
+    grid-template-rows: 611px;
+    gap: 16px;
+  }
+  @include desktop {
+    // gap: 32px;
+    // align-items: flex-end;
+    display: grid;
+    grid-template-columns: 368px 368px 368px;
+    grid-template-rows: 796px;
+    gap: 32px;
+  }
 }
 
 .label {
@@ -11,6 +28,14 @@
   @include fonts(400, 18px, 1.17, 0.04em);
   text-align: center;
   color: $second-title-color;
+  @include tablet {
+    @include fonts(null, 28px, 1.15, null);
+    margin-bottom: 18px;
+  }
+  @include desktop {
+    @include fonts(null, 30px, 1.13, null);
+    margin-bottom: 16px;
+  }
 }
 
 .products-title {
@@ -20,15 +45,31 @@
   @include fonts(400, 34px, 1.15, 0.04em);
   text-align: center;
   color: $main-title-color;
+  @include tablet {
+    @include fonts(null, 48px, null, null);
+    margin-bottom: 20px;
+  }
+  @include desktop {
+    @include fonts(null, 58px, 1.14, 0.06em);
+    margin-bottom: 20px;
+  }
 }
 
 .products-item {
   position: relative;
-  margin-top: 140px;
+  margin-top: calc(280 / 2);
+  padding-bottom: 40px;
 
   width: 280px;
-  height: 489px;
   border-radius: 24px;
+  @include tablet {
+    width: 224px;
+  }
+  @include desktop {
+    margin-top: 261px;
+
+    width: 368px;
+  }
   &__first {
     background-color: $header-color;
   }
@@ -39,11 +80,85 @@
     background-color: $third-bg-color;
   }
 }
-.products-img {
+.products-item::before {
+  content: '';
   position: absolute;
+  left: 0;
   top: -140px;
   z-index: 1;
+
+  width: 280px;
+  height: 280px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include tablet {
+    top: -138px;
+    width: 224px;
+    height: 224px;
+  }
+  @include desktop {
+    top: -261px;
+    width: 368px;
+    height: 394px;
+  }
 }
+.products-item__first::before {
+  background-image: url(../images/mob-icecream-1x.png);
+  @include retina {
+    background-image: url(../images/mob-icecream-2x.png);
+  }
+
+  @include tablet {
+    background-image: url(../images/tab-icecream.png);
+    @include retina {
+      background-image: url(../images/tab-icecream@2x.png);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/desk-icecream.png);
+    @include retina {
+      background-image: url(../images/desk-icecream@2x.png);
+    }
+  }
+}
+.products-item__scnd::before {
+  background-image: url(../images/mob-icecoffee-1x.png);
+  @include retina {
+    background-image: url(../images/mob-icecoffee-2x.png);
+  }
+  @include tablet {
+    background-image: url(../images/tab-icecoffee.png);
+    @include retina {
+      background-image: url(../images/tab-icecoffee@2x.png);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/desk-icecoffee.png);
+    @include retina {
+      background-image: url(../images/desk-icecoffee@2x.png);
+    }
+  }
+}
+.products-item__thrd::before {
+  background-image: url(../images/mob-milkshakes-1x.png);
+  @include retina {
+    background-image: url(../images/mob-milkshakes-2x.png);
+  }
+  @include tablet {
+    background-image: url(../images/tab-milkshakes.png);
+    @include retina {
+      background-image: url(../images/tab-milkshakes@2x.png);
+    }
+  }
+  @include desktop {
+    background-image: url(../images/desk-milkshakes.png);
+    @include retina {
+      background-image: url(../images/desk-milkshakes@2x.png);
+    }
+  }
+}
+
 .products-item__title {
   margin-bottom: 32px;
   text-align: center;
@@ -51,6 +166,14 @@
   font-family: 'Titan One', sans-serif;
   @include fonts(400, 20px, 1.15, 0.04em);
   color: #fff;
+
+  @include tablet {
+    padding-top: 118px;
+  }
+  @include desktop {
+    padding-top: 165px;
+    @include fonts(null, 30px, 1.13, null);
+  }
 }
 .products-circle {
   display: flex;
@@ -74,6 +197,18 @@
   @include fonts(700, 14px, 1.15, 0.04em);
   text-align: center;
   color: #fff;
+
+  @include tablet {
+    height: 150px;
+    width: 160px;
+    line-height: 1.76;
+    overflow: hidden;
+  }
+  @include desktop {
+    font-size: 16px;
+    width: 245;
+    height: 106;
+  }
 }
 
 .products-button {
@@ -85,10 +220,13 @@
 
   cursor: pointer;
   background-color: #fff;
-
+  @include transition(box-shadow);
   color: $main-title-color;
   border-radius: 50%;
   border: none;
+  &:hover {
+    box-shadow: 0px 0px 80px 10px rgba(22, 16, 16, 0.2) inset;
+  }
   &.is-open {
     color: $main-title-color;
     z-index: 2;
@@ -134,16 +272,25 @@
   height: 100%;
   border-radius: 25px;
   transform: scale(0);
-  transition: transform 1s ease-in-out;
+  @include transition(transform);
 
   font-family: 'DM Sans', sans-serif;
-  @include fonts(700, 19px, 1.15, 0.04em);
+  @include fonts(700, 14px, 1.15, 0.04em);
   text-align: bottom;
   color: #fff;
 
   text-align: center;
   display: flex;
   align-items: flex-end;
+  padding: 40px 15px;
+  // @include tablet {
+  //   line-height: 1.76;
+  //   overflow: hidden;
+  // }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.76;
+  }
 
   &__cream {
     background-color: $header-color;
@@ -156,5 +303,5 @@
   }
 }
 .products-item.is-open .thumb-text {
-  transform: scale(1) rotate(1080deg);
+  transform: scale(1) rotate(720deg);
 }
