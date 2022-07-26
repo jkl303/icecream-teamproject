@@ -369,22 +369,18 @@
 
 // HERO //
 
-.hero > .container {
-  margin: 0;
-
-}
-
 .hero {
   width: 100%;
-  height: 436px;
+  height: 502px;
   background-color: #ffb8ca;
+  position: relative;
 
   @include tablet {
-    height: 350px; //416px - 66px  общ выстота секции - header//
+    height: 416px; 
   }
 
   @include desktop {
-    height: 598px; //664px - 66px  общ выстота секции - header//
+    height: 664px; 
   }
 }
 
@@ -464,7 +460,7 @@
   &:hover,
   &:focus {
     background-color: #ecebeb;
-    // @include transition;
+  
   }
     @include desktop {
       width: 138px;
@@ -479,7 +475,7 @@
   height: 100%;
   max-width: 346px;
   max-height: 344px;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   top: 83px;
   left: calc(47.32% - 115.424px);
@@ -497,11 +493,10 @@
       width: 534px;
       max-width: 534px;
       max-height: 534px;
-      left: 517px;
+      left: calc(50% - 83px);
       top: 54px;
   
   }
-
 }
 
 .circle-wraper .circle {
@@ -530,18 +525,18 @@
       max-height: 333px;
     }
 
-      @include desktop {
-        width: 534px;
-        height: 534px;
-        max-width: 534px;
-        max-height: 534px;
-      
-      }
+    @include desktop {
+      width: 534px;
+      height: 534px;
+      max-width: 534px;
+      max-height: 534px;
+    
+    }
 
 }
 
 .ice-cream {
-  background-image: url('../images/hero/mob-icecream-hero-1x.png');
+  background-image: url(../images/hero/mob-icecream-hero-1x.png);
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
@@ -556,31 +551,38 @@
     &:hover,
     &:focus {
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    
     }
-  
 
   @include retina {
-    background-image: url('../images/hero/mob-icecream-hero-1x.png');
+    background-image: url(../images/hero/mob-icecream-hero-1x.png);
   
   }
 
     @include tablet {
-      background-image: url('../images/hero/tab-icecream-hero.png');
+      background-image: url(../images/hero/tab-icecream-hero.png);
       width: 143px;
       height: 336px;
       top: 80px;
       left: calc(61.33% - 149px);
+
+      @include retina {
+        background-image: url(../images/hero/tab-icecream-hero.png);
+      
+      }
     
     }
+
       @include desktop {
-        background-image: url('../images/hero/desk-icecream-hero.png');
+        background-image: url(../images/hero/desk-icecream-hero.png);
         width: 236px;
         height: 557px;
         top: 108px;
-        left: 636px;
+        left: calc(50% + 36px);
+        @include retina {
+          background-image: url(../images/hero/desk-icecream-hero.png);
+        
+        }
 
-      
       }
 
 }
@@ -588,7 +590,7 @@
 .big-eco {
 
   @include tablet {
-  background-image: url('../images/hero/tab-big-eco.png');
+  background-image: url(../images/hero/tab-big-eco.png);
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
@@ -596,11 +598,11 @@
   width: 152px;
   height: 154px;
   top: 246px;
-  left: 32px;
+  left: calc(50% - 352px);
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-big-eco.png');
+    background-image: url(../images/hero/desk-big-eco.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -608,14 +610,14 @@
     width: 213px;
     height: 216px;
     top: 388px;
-    left: 16px;
+    left: calc(50% - 584px);
   }
 }
 
 .girl {
 
   @include tablet {
-    background-image: url('../images/hero/tab-girl.png');
+    background-image: url(../images/hero/tab-girl.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -623,11 +625,11 @@
     width: 190px;
     height: 150px;
     top: 265px;
-    right: 32px;
+    right: calc(50% - 352px);
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-girl.png');
+    background-image: url(../images/hero/desk-girl.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -635,14 +637,14 @@
     width: 304px;
     height: 241px;
     top: 423px;
-    right: 16px;
+    right: calc(50% - 584px);
   }
 }
 
 .hero-16 {
 
   @include tablet {
-    background-image: url('../images/hero/tab-16.png');
+    background-image: url(../images/hero/tab-16.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -650,11 +652,11 @@
     width: 43px;
     height: 44px;
     top: 92px;
-    right: 32px;
+    right: calc(50% - 352px);
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-16.png');
+    background-image: url(../images/hero/desk-16.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -662,13 +664,13 @@
     width: 72px;
     height: 77px;
     top: 152px;
-    right: 16px;
+    right: calc(50% - 584px);
   }
 }
 
 .hero-23 {
     @include tablet {
-      background-image: url('../images/hero/tab-23.png');
+      background-image: url(../images/hero/tab-23.png);
       background-repeat: no-repeat;
       background-size: auto;
       position: absolute;
@@ -676,11 +678,11 @@
       width: 51px;
       height: 43px;
       top: 152px;
-      right: 32px;
+      right: calc(50% - 352px); 
     }
     
     @include desktop {
-      background-image: url('../images/hero/desk-23.png');
+      background-image: url(../images/hero/desk-23.png);
       background-repeat: no-repeat;
       background-size: auto;
       position: absolute;
@@ -688,7 +690,7 @@
       width: 92px;
       height: 76px;
       top: 244px;
-      right: 16px;
+      right: calc(50% - 584px);
     }
 
 }
@@ -720,39 +722,126 @@
 .hero-title-wrapper {
   margin-bottom: 20px;
 }
+.hero-thumb {
+    display: none;
 
-// .hero-text {
-//   display: none;
-//   @include tablet {
-//   position: absolute;
-//   z-index: 2;
-//   width: 114px;
-//   height: 48px;
-//   top: 287px;
-//   left: 184px;
-//   @include fonts(400, 8px, 1.5, null);
-//   text-align: left;
-//   color: #fff;
-//   }
+    @include tablet {
+      display: block;
+      position: absolute;
+      z-index: 4;
+      width: 114px;
+      height: 73px;
+      top: 287px;
+      left: calc(50% - 200px);
 
-// }
+    }
 
-// .hero-button {
-//     display: none;
+    @include desktop {
+
+      width: 200px;
+      height: 124px;
+      top: 456px;
+      left: calc(50% - 371px);
     
-//     @include tablet {
-//       position: absolute;
-//       z-index: 2;
-//       left: 50%;
-//       transform: translateX(-50%);
-//       width: 18px;
-//       height: 18px;
+    }
+  
+}
+
+.hero-text {
+ 
+      @include tablet {
+
+        width: 114px;
+        height: 48px;
+        font-style: normal;
+        @include fonts(400, 8px, 1.5, null);
+        text-align: left;
+        color: #fff;
+        margin-bottom: 7px;
+      }
+
+        @include desktop {
+        width: 200px;
+        height: 78px;
+        @include fonts(400, 14px, 1.4, null);
+        text-align: left;
+        color: #fff;
+        
+        }
+
+}
+
+.hero-button {
+  padding: 0;
+
+  &.is-open {
+    color: $main-title-color;
+    z-index: 2;
+  }
+  
+  &.is-open .hero-icon {
+    display: none;
+  }
+  
+  &.is-open .hero-close {
+    display: block;
+  }
+    
+    @include tablet {
+      width: 18px;
+      height: 18px;
       
-//       cursor: pointer;
-//       background-color: #fff;
-      
+      cursor: pointer;
+      background-color: #fff;
+
 //       color: $main-title-color;
 //       border-radius: 50%;
 //       border: none; 
 //     }
 // }
+
+      fill: #D41443;
+      border-radius: 50%;
+      border: none;
+       
+    }
+
+        @include desktop {
+          width: 26px;
+          height: 26px;
+        
+          cursor: pointer;
+          background-color: #fff;
+        
+          fill: #D41443;
+          border-radius: 50%;
+          border: none;
+        }
+       
+        .hero-close,
+        .hero-icon {
+          fill: #D41443;
+        }
+        
+        .hero-close {
+          display: none;
+        }
+}
+
+      .hero-icon {
+        height: 10px;
+        width: 10px;
+        fill: #D41443;
+        }
+
+      .hero-close {
+        height: 10px;
+        width: 10px;
+        fill: #D41443;
+        }
+
+      .hero-thumb.is-open .hero-text {
+        transform: scale(1.05);
+        transition-duration: 1s;
+        color: #D41443;
+          }
