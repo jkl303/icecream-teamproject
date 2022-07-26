@@ -47,12 +47,8 @@
   width: 80px;
   height: 16px;
 
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.22;
+  @include fonts(500, 12px, 1.22, 0.04em);
   color: #fff;
-  letter-spacing: 0.04em;
-  font-family: 'DM Sans';
 
   background-color: #f0d1a5;
   border-radius: 4px;
@@ -64,6 +60,7 @@
 
     width: 73px;
     height: 28px;
+    @include fonts(500, 16px, 1.87, 0.04em);
   }
 }
 
@@ -77,31 +74,31 @@
 }
 
 .brunches__sity {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.22;
+  @include fonts(500, 12px, 1.22, 0.04em);
   font-family: 'DM Sans';
-
-  letter-spacing: 0.04em;
-
   margin-bottom: 8px;
   @include tablet {
     margin-bottom: 12px;
+    @include fonts(500, 14px, 1.86, 0.04em);
+  }
+
+  @include desktop {
+    @include fonts(500, 16px, 1.86, 0.04em);
   }
 }
 
 .brunches__text {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
-  font-family: 'DM Sans';
-
+  @include fonts(500, 12px, 1.5, null);
   color: $text-color;
 
   margin-bottom: 24px;
 
   @include tablet {
     margin-bottom: 32px;
+    @include fonts(500, 14px, 1.64, null);
+  }
+  @include desktop {
+    @include fonts(500, 16px, 1.81, 0.04em);
   }
 }
 
@@ -119,17 +116,19 @@
 }
 
 .schedule-days {
-  font-family: 'DM Sans';
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.83;
+  @include fonts(500, 12px, 1.83, null);
+
+  @include tablet {
+    @include fonts(500, 14px, 1.87, null);
+  }
+
+  @include desktop {
+    @include fonts(500, 16px, 1.87, 0.04em);
+  }
 }
 
 .schedule-houres {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 186%;
-  font-family: 'DM Sans';
+  @include fonts(500, 12px, 186%, null);
 
   color: $ellipse-color;
 
@@ -137,6 +136,11 @@
 
   @include tablet {
     margin-bottom: 12px;
+    @include fonts(500, 14px, 1.87, null);
+  }
+
+  @include desktop {
+    @include fonts(500, 16px, 1.87, 0.04em);
   }
 }
 
@@ -146,16 +150,22 @@
 
 .brunches__contacts {
   text-decoration: none;
-  font-family: 'DM Sans';
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+
+  @include fonts(500, 12px, 1.5, null);
   color: $text-color;
+
   @include transition($property: color);
 
   &:hover,
   &:focus {
     color: $main-title-color;
+  }
+
+  @include tablet {
+    @include fonts(500, 14px, 1.86, null);
+  }
+  @include desktop {
+    @include fonts(500, 16px, 1.81, null);
   }
 }
 
@@ -183,11 +193,8 @@
   align-items: center;
   justify-content: center;
 
+  @include fonts(700, 16px, 1.31, null);
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
   color: #ffffff;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -230,12 +237,8 @@
   align-items: center;
   justify-content: center;
 
-  font-family: 'DM Sans';
+  @include fonts(700, 16px, 1.31, null);
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
-
   color: $main-title-color;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -308,7 +311,7 @@
   background-color: $modal-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 24px;
 
   opacity: 1;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -340,52 +343,39 @@
   background-color: transparent;
   cursor: pointer;
 
-  //   color: var(--main-title-color);
+  color: #ffffff;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition($property: color);
 
-  //   &:hover,
-  //   &:focus {
-  //     // color: var(--main-accent-color);
-  //   }
+  &:hover,
+  &:focus {
+    color: $main-title-color;
+  }
 }
 
 .close-button-icon {
-  fill: #fff;
+  fill: currentColor;
 }
 .form-field {
   position: relative;
   margin-bottom: 10px;
-
-  //   color: var(--main-title-color);
 }
 
 .request-form__title {
-  font-family: 'DM Sans';
+  @include fonts(700, 19px, 18px, null);
   font-style: normal;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 18px;
+  color: $main-title-color;
+
   display: flex;
   align-items: center;
 
-  color: $main-title-color;
-  display: block;
-  text-align: center;
-
   margin-bottom: 12px;
-
-  //   color: var(--main-title-color);
 }
 
 .request-form__label {
   display: block;
 
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.28;
+  @include fonts(700, 14px, 1.28, null);
   color: #fff;
 
   margin-bottom: 4px;
@@ -394,31 +384,34 @@
 .request-form__input {
   height: 40px;
   border: 1px solid rgba(165, 5, 5, 0.941);
-  border-radius: 5px;
+  border-radius: 10px;
   width: 100%;
-  //   padding-left: 42px;
+  padding-left: 32px;
 
+  color: $main-title-color;
   background-color: #ffb8ca;
   outline: none;
 
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  //   &:focus {
-  //     // border: 1px solid var(--main-accent-color);
-  //     // outline: 1px solid var(--main-accent-color);
-  //     // ~ .request-form__icon {
-  //     //   fill: var(--main-accent-color);
-  //     // }
-  //   }
+  &:focus {
+    border: 1px solid $main-title-color;
+    outline: 1px solid $main-title-color;
+    ~ .request-form__icon {
+      fill: $main-title-color;
+    }
+  }
 }
 
-// .request-form__icon {
-//   position: absolute;
-//   bottom: 11px;
-//   left: 12px;
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
+.request-form__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  fill: #cc3356;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .request-comment-area {
   max-height: 120px;
@@ -426,7 +419,9 @@
   padding: 12px 16px;
   resize: none;
   margin-bottom: 20px;
+  outline: none;
 
+  color: $main-title-color;
   background-color: #ffb8ca;
 
   border: 1px solid rgba(165, 5, 5, 0.941);
@@ -435,10 +430,10 @@
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  //   &:focus {
-  //     border: 1px solid var(--main-accent-color);
-  //     outline: 1px solid var(--main-accent-color);
-  //   }
+  &:focus {
+    border: 1px solid $main-title-color;
+    outline: 1px solid $main-title-color;
+  }
 
   &::placeholder {
     font-size: 14px;
@@ -450,11 +445,8 @@
 }
 
 .request-form__button {
-  font-family: 'DM Sans';
+  @include fonts(700, 20px, 1.31, null);
   font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.31;
   display: flex;
   align-items: center;
   justify-content: center;
