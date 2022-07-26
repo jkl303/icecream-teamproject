@@ -154,7 +154,7 @@
   @include fonts(500, 12px, 1.5, null);
   color: $text-color;
 
-  @include transition($property: color);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -200,8 +200,6 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   svg {
-    position: relative;
-    top: 1px;
     margin-left: 8px;
 
     use {
@@ -209,7 +207,7 @@
     }
   }
 
-  @include transition($property: background-color);
+  @include transition;
 
   &:hover,
   &:focus {
@@ -243,15 +241,13 @@
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  @include transition($property: background-color);
+  @include transition;
 
   &:hover,
   &:focus {
-    background-color: $second-title-color;
+    background-color: #ecebeb;
   }
   svg {
-    position: relative;
-    top: 1px;
     margin-left: 8px;
 
     use {
@@ -273,7 +269,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1200;
 
   width: 100vw;
   height: 100vh;
@@ -281,7 +277,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(opacity);
 
   padding: 40px 15px 40px 15px;
 
@@ -293,6 +289,10 @@
       transform: scale(1.2);
       opacity: 0;
     }
+  }
+
+  @media screen and (max-width: 950px) {
+    overflow: auto;
   }
 
   @include tablet {
@@ -308,7 +308,7 @@
   margin-right: auto;
   padding: 20px;
 
-  background-color: $modal-bg-color;
+  background-color: $ellipse-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 24px;
@@ -345,7 +345,7 @@
 
   color: #ffffff;
 
-  @include transition($property: color);
+  @include transition(color);
 
   &:hover,
   &:focus {
@@ -376,20 +376,20 @@
   display: block;
 
   @include fonts(700, 14px, 1.28, null);
-  color: #fff;
+  color: $main-title-color;
 
   margin-bottom: 4px;
 }
 
 .request-form__input {
   height: 40px;
-  border: 1px solid rgba(165, 5, 5, 0.941);
+  border: none;
   border-radius: 10px;
   width: 100%;
   padding-left: 32px;
 
   color: $main-title-color;
-  background-color: #ffb8ca;
+  background-color: #fff;
   outline: none;
 
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -422,9 +422,9 @@
   outline: none;
 
   color: $main-title-color;
-  background-color: #ffb8ca;
+  background-color: #fff;
 
-  border: 1px solid rgba(165, 5, 5, 0.941);
+  border: none;
   border-radius: 5px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -440,7 +440,7 @@
     line-height: 1.67;
     letter-spacing: 0.01em;
 
-    color: #ffffff;
+    color: $main-title-color;
   }
 }
 
@@ -453,7 +453,7 @@
 
   color: #d41443;
 
-  width: 209px;
+  width: 150px;
   height: 44px;
 
   background: #ffffff;
@@ -469,4 +469,36 @@
     box-shadow: 0px 4px 4px rgba(223, 64, 64, 0.412);
     cursor: pointer;
   }
+}
+
+.thanks-modal {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
+  width: 250px;
+  height: 50%;
+
+  background-color: $main-title-color;
+  z-index: 150;
+  border-radius: 10px;
+}
+
+.thanks-modal__close {
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  border: none;
+}
+
+.thanks-modal__text {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  color: $background-color;
+  @include fonts(700, 24, 1.31, null);
+  transform: rotate(45deg);
 }
