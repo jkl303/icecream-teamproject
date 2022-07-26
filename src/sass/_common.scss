@@ -71,19 +71,24 @@ img {
   overflow: hidden;
 }
 
-// #myBtn {
-//   display: none;
-//   position: fixed;
-//   bottom: 20px;
-//   right: 30px;
-//   z-index: 99;
-//   border: none;
-//   outline: none;
-//   cursor: pointer;
-//   border-radius: 10px;
-//   font-size: 18px;
-// }
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+}
 
-// #myBtn:hover .go-top {
-//   fill: $main-title-color;
-// }
+#myBtn:hover .go-top {
+  fill: $main-title-color;
+}
+
+.go-top {
+  fill: $text-color;
+  color: $text-color;
+}
