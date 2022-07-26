@@ -248,18 +248,29 @@ overflow: hidden;
   justify-content: center;
 }
 
-.modal-about-btn:hover,
-.modal-about-btn:focus {
+// .modal-about-btn:hover,
+// .modal-about-btn:focus {
+//   cursor: pointer;
+//   background-color: $second-title-color;
+// }
+// .modal-about-btn {
+//   @include transition;
+// }
+
+// .about-icon:hover{
+//   fill:currentColor
+// }
+
+.about-icon {
   cursor: pointer;
-  background-color:#ECEBEB ;
-}
-.modal-about-btn {
-  @include transition;
+  fill: $text-color;
 }
 
-.about-icon:hover{
-  fill:currentColor
+.about-icon:hover,
+.about-icon:focus {
+  fill: $main-title-color;
 }
+
 
 .is-hidden {
   opacity: 0;
