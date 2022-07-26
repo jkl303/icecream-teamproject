@@ -317,12 +317,6 @@
 
 // HERO //
 
-// .hero > .container {
-//   margin: 0;
-//   padding: 0 32px;
-
-// }
-
 .hero {
   width: 100%;
   height: 502px;
@@ -330,11 +324,11 @@
   position: relative;
 
   @include tablet {
-    height: 416px; //416px - 66px  общ выстота секции - header//
+    height: 416px; 
   }
 
   @include desktop {
-    height: 664px; //664px - 66px  общ выстота секции - header//
+    height: 664px; 
   }
 }
 
@@ -409,12 +403,12 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  @include transition;
+  @include transition (background-color);
 
   &:hover,
   &:focus {
     background-color: #ecebeb;
-    // @include transition;
+  
   }
     @include desktop {
       width: 138px;
@@ -451,7 +445,6 @@
       top: 54px;
   
   }
-
 }
 
 .circle-wraper .circle {
@@ -480,18 +473,18 @@
       max-height: 333px;
     }
 
-      @include desktop {
-        width: 534px;
-        height: 534px;
-        max-width: 534px;
-        max-height: 534px;
-      
-      }
+    @include desktop {
+      width: 534px;
+      height: 534px;
+      max-width: 534px;
+      max-height: 534px;
+    
+    }
 
 }
 
 .ice-cream {
-  background-image: url('../images/hero/mob-icecream-hero-1x.png');
+  background-image: url(../images/hero/mob-icecream-hero-1x.png);
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
@@ -506,30 +499,38 @@
     &:hover,
     &:focus {
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    
     }
 
   @include retina {
-    background-image: url('../images/hero/mob-icecream-hero-1x.png');
+    background-image: url(../images/hero/mob-icecream-hero-1x.png);
   
   }
 
     @include tablet {
-      background-image: url('../images/hero/tab-icecream-hero.png');
+      background-image: url(../images/hero/tab-icecream-hero.png);
       width: 143px;
       height: 336px;
       top: 80px;
       left: calc(61.33% - 149px);
+
+      @include retina {
+        background-image: url(../images/hero/tab-icecream-hero.png);
+      
+      }
     
     }
+
       @include desktop {
-        background-image: url('../images/hero/desk-icecream-hero.png');
+        background-image: url(../images/hero/desk-icecream-hero.png);
         width: 236px;
         height: 557px;
         top: 108px;
         left: calc(50% + 36px);
+        @include retina {
+          background-image: url(../images/hero/desk-icecream-hero.png);
+        
+        }
 
-      
       }
 
 }
@@ -537,7 +538,7 @@
 .big-eco {
 
   @include tablet {
-  background-image: url('../images/hero/tab-big-eco.png');
+  background-image: url(../images/hero/tab-big-eco.png);
   background-repeat: no-repeat;
   background-size: auto;
   position: absolute;
@@ -549,7 +550,7 @@
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-big-eco.png');
+    background-image: url(../images/hero/desk-big-eco.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -564,7 +565,7 @@
 .girl {
 
   @include tablet {
-    background-image: url('../images/hero/tab-girl.png');
+    background-image: url(../images/hero/tab-girl.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -576,7 +577,7 @@
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-girl.png');
+    background-image: url(../images/hero/desk-girl.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -591,7 +592,7 @@
 .hero-16 {
 
   @include tablet {
-    background-image: url('../images/hero/tab-16.png');
+    background-image: url(../images/hero/tab-16.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -603,7 +604,7 @@
   }
 
   @include desktop {
-    background-image: url('../images/hero/desk-16.png');
+    background-image: url(../images/hero/desk-16.png);
     background-repeat: no-repeat;
     background-size: auto;
     position: absolute;
@@ -617,7 +618,7 @@
 
 .hero-23 {
     @include tablet {
-      background-image: url('../images/hero/tab-23.png');
+      background-image: url(../images/hero/tab-23.png);
       background-repeat: no-repeat;
       background-size: auto;
       position: absolute;
@@ -629,7 +630,7 @@
     }
     
     @include desktop {
-      background-image: url('../images/hero/desk-23.png');
+      background-image: url(../images/hero/desk-23.png);
       background-repeat: no-repeat;
       background-size: auto;
       position: absolute;
