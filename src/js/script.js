@@ -20,5 +20,5 @@ new Swiper('.slider', {
         loop: true
     },
 
-    grabCursor:true
+    grabCursor:true,
 }); 
