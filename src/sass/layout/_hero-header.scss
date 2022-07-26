@@ -250,7 +250,7 @@
 }
 
 .backdrop__header.invisible .modal__header {
-  transform: scale(0.9) translateX(70%);
+  transform: scale(0.9) translateX(-70%);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -263,8 +263,7 @@
   z-index: 110;
   background-color: $ellipse-color;
   border-radius: 10px;
-  filter: drop-shadow(-8px 0px 20px rgba(0, 0, 0, 0.25));
-  transform: opacity(1) translateX(70%);
+  transform: opacity(1) translateX(-70%);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   @include tablet {
     left: 60%;
