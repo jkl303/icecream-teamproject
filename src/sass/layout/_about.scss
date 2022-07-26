@@ -178,11 +178,10 @@
 
 .about-content__btn:hover,
 .about-content__btn:focus {
-  background-color: $header-color;
+  background-color:#ECEBEB;
 }
 .about-content__btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
 }
 
 .icon {
@@ -219,6 +218,7 @@ overflow: hidden;
   background-color: $background-color;
   border-radius: 5px;
   transition: transform 300ms linear;
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
       width: 544px;
@@ -250,11 +250,11 @@ overflow: hidden;
 
 .modal-about-btn:hover,
 .modal-about-btn:focus {
-  background-color: $header-color;
+  cursor: pointer;
+  background-color:#ECEBEB ;
 }
 .modal-about-btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
 }
 
 .about-icon:hover{
