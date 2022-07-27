@@ -191,6 +191,7 @@
 /*Модальное окно*/
 
 .backdrop-about {
+  z-index: 52;
   position: fixed;
 overflow: hidden;
   top: 0;
@@ -248,19 +249,6 @@ overflow: hidden;
   justify-content: center;
 }
 
-// .modal-about-btn:hover,
-// .modal-about-btn:focus {
-//   cursor: pointer;
-//   background-color: $second-title-color;
-// }
-// .modal-about-btn {
-//   @include transition;
-// }
-
-// .about-icon:hover{
-//   fill:currentColor
-// }
-
 .about-icon {
   cursor: pointer;
   fill: $text-color;
@@ -270,7 +258,6 @@ overflow: hidden;
 .about-icon:focus {
   fill: $main-title-color;
 }
-
 
 .is-hidden {
   opacity: 0;
