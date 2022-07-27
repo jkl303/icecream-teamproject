@@ -45,7 +45,7 @@
 
 .close-menu-icon {
   fill: $background-color;
-  @include transition;
+  @include transition(fill);
 }
 
 .close-menu-icon:hover,
@@ -105,7 +105,6 @@
   right: 20px;
   border: none;
   cursor: pointer;
-  @include transition(color);
 }
 
 .buy-now {
@@ -212,7 +211,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 20px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition(color);
   @include desktop {
     font-size: 16px;
     line-height: calc(21 / 16);
@@ -276,7 +275,6 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  @include transition;
 }
 
 .modal-title {
@@ -352,7 +350,6 @@
 }
 .modal-submit {
   margin-top: 0;
-  @include transition;
 }
 
 .modal-submit:hover,
