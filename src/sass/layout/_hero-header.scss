@@ -9,7 +9,9 @@
 // .mob-menu::-webkit-scrollbar {
 //   width: 0 !important;
 // }
-
+.header .container {
+  position: relative;
+}
 .mobmenu.invisible {
   left: -100%;
   -webkit-transition: all ease-out 0.5s;
