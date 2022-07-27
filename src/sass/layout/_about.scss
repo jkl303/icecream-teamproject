@@ -191,7 +191,7 @@
 /*Модальное окно*/
 
 .backdrop-about {
-  z-index: 50;
+  z-index: 51;
   position: fixed;
 overflow: hidden;
   top: 0;
@@ -258,7 +258,6 @@ overflow: hidden;
 .about-icon:focus {
   fill: $main-title-color;
 }
-
 
 .is-hidden {
   opacity: 0;
