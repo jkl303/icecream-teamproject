@@ -52,7 +52,7 @@
 
 .close-menu-icon:hover,
 .close-menu-icon:focus {
-  fill: $main-title-color;
+  fill: $text-color;
 }
 
 .invisible {
@@ -375,7 +375,7 @@
 
 .modal-submit {
   height: 44px;
-  // margin-top: 60px;
+  cursor: pointer;
   background-color: $background-color;
   align-items: center;
   color: $main-title-color;
@@ -400,6 +400,7 @@
   top: 20px;
   right: 20px;
   border: none;
+  cursor: pointer;
 }
 
 .thanks-text-block {
