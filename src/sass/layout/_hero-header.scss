@@ -45,6 +45,7 @@
 
 .close-menu-icon {
   fill: $background-color;
+  @include transition;
 }
 
 .close-menu-icon:hover,
@@ -141,7 +142,6 @@
 .buy-now:hover .buy-now-span,
 .buy-now:focus .buy-now-span {
   color: $main-title-color;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buy-now:hover .buy-now-icon,
@@ -276,7 +276,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
 }
 
 .modal-title {
@@ -352,13 +352,13 @@
 }
 .modal-submit {
   margin-top: 0;
+  @include transition;
 }
 
 .modal-submit:hover,
 .modal-submit:focus {
   color: $main-title-color;
   background-color: #ecebeb;
-  @include transition;
 }
 
 // MODAL - THANKS //
@@ -388,7 +388,7 @@
   font-size: 14px;
   line-height: calc(18 / 14);
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
   @include tablet {
     padding-left: 37px;
     padding-right: 37px;
