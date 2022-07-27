@@ -29,13 +29,14 @@
 }
 
 .header__burger-open {
+  margin-left: auto;
   width: 40px;
   height: 40px;
   background: transparent;
   border: none;
   cursor: pointer;
   @include tablet {
-    margin-left: 290px;
+    margin-left: 260px;
   }
   @include desktop {
     display: none;
@@ -58,20 +59,15 @@
 }
 
 .header__nav-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 8px;
   padding-bottom: 8px;
-  padding-left: 20px;
-  padding-right: 20px;
   z-index: 40;
   @include tablet {
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-top: 32px;
   }
   @include desktop {
@@ -108,7 +104,7 @@
   right: 20px;
   border: none;
   cursor: pointer;
-  @include transition;
+  @include transition(color);
 }
 
 .buy-now {
