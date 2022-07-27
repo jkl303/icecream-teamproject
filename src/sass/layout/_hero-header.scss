@@ -108,7 +108,7 @@
   right: 20px;
   border: none;
   cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
 }
 
 .buy-now {
@@ -116,7 +116,7 @@
   display: flex;
   height: 44px;
   margin-top: 60px;
-  background-color: #ffffff;
+  background-color: $background-color;
   align-items: center;
   color: $main-title-color;
   text-align: center;
@@ -126,7 +126,7 @@
 
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
   @include tablet {
     padding-left: 37px;
     padding-right: 37px;
@@ -259,7 +259,7 @@
   top: 10px;
   left: 10px;
   width: 300px;
-  height: 520px;
+  height: 580px;
   z-index: 110;
   background-color: $ellipse-color;
   border-radius: 10px;
@@ -308,13 +308,15 @@
 .header__modal-form-field {
   height: 50px;
   width: 100%;
+  position: relative;
 }
 
 .header__modal-input {
+  padding-left: 32px;
   width: 100%;
   border: none;
   @include fonts(500, 12, 1.29, null);
-  min-height: 30px;
+  height: 30px;
   color: $main-title-color;
   padding-left: 10px;
   border-radius: 10px;
@@ -356,15 +358,18 @@
   margin-top: 0;
 }
 
-.modal-submit:hover {
-  color: $background-color;
+.modal-submit:hover,
+.modal-submit:focus {
+  color: $main-title-color;
+  background-color: #ecebeb;
+  @include transition;
 }
 
 // MODAL - THANKS //
 
 .modal-thanks {
   width: 280px;
-  height: 50%;
+  height: 550px;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -402,13 +407,16 @@
   border: none;
 }
 
-.thanks-text {
+.thanks-text-block {
   position: absolute;
-  top: 45%;
-  left: 10%;
+  top: 100px;
+  left: 30px;
+}
+
+.thanks-text {
   color: $background-color;
   @include fonts(700, 24, 1.31, null);
-  transform: rotate(45deg);
+  margin-bottom: 30px;
 }
 
 // HERO //
