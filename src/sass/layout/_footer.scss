@@ -46,6 +46,8 @@
     &__tel {
         text-decoration: none;
         color: $main-title-color;
+        @include transition(color);
+        &:hover, &:focus {color: $text-color;}
     }
 
     &__legal {
