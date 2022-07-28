@@ -4,28 +4,28 @@
 
     <ul class="brunches__list">
       <li class="brunches__card">
-        <span class="brunches__point">CAFE</span>
-        <h3 class="brunches__sity">Chicago</h3>
-        <p class="brunches__text">
-          Fusce ut velit laoreet, tempus arcu molestie vulputate
-        </p>
-        <div class="scheduele-box">
-          <ul>
-            <li>
-              <p class="schedule-days">Monday - Friday</p>
-              <p class="schedule-houres">06:00 AM - 10:00 PM</p>
-            </li>
-
-            <li>
-              <p class="schedule-days">Saturday - Sunday</p>
-              <p class="schedule-houres schedule-houres--reset">
-                08:00 AM - 16:00 PM
-              </p>
-            </li>
-          </ul>
+        <div class="title-box">
+          <span class="brunches__point">CAFE</span>
+          <h3 class="brunches__sity">Chicago</h3>
+          <p class="brunches__text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
         </div>
+        <ul class="scheduele-box">
+          <li>
+            <p class="schedule-days">Monday - Friday</p>
+            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+          </li>
 
-        <ul>
+          <li>
+            <p class="schedule-days">Saturday - Sunday</p>
+            <p class="schedule-houres schedule-houres--reset">
+              08:00 AM - 16:00 PM
+            </p>
+          </li>
+        </ul>
+
+        <ul class="contacts-box">
           <li>
             <a class="brunches__contacts" href="tel:+610383766284"
               >+61(0) 383 766 284</a
@@ -39,26 +39,26 @@
         </ul>
       </li>
       <li class="brunches__card">
-        <span class="brunches__point brunches__point--green">FOODTRUCK</span>
-        <h3 class="brunches__sity">Los Angeles</h3>
-        <p class="brunches__text">
-          Fusce ut velit laoreet, tempus arcu molestie vulputate
-        </p>
-        <div class="scheduele-box">
-          <ul>
-            <li>
-              <p class="schedule-days">Monday - Friday</p>
-              <p class="schedule-houres">06:00 AM - 10:00 PM</p>
-            </li>
-
-            <li>
-              <p class="schedule-days">Saturday - Sunday</p>
-              <p class="schedule-houres">08:00 AM - 16:00 PM</p>
-            </li>
-          </ul>
+        <div class="title-box">
+          <span class="brunches__point brunches__point--green">FOODTRUCK</span>
+          <h3 class="brunches__sity">Los Angeles</h3>
+          <p class="brunches__text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
         </div>
+        <ul class="scheduele-box">
+          <li>
+            <p class="schedule-days">Monday - Friday</p>
+            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+          </li>
 
-        <ul>
+          <li>
+            <p class="schedule-days">Saturday - Sunday</p>
+            <p class="schedule-houres">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+
+        <ul class="contacts-box">
           <li>
             <a class="brunches__contacts" href="tel:+610383766284"
               >+61(0) 383 766 284</a
@@ -72,26 +72,26 @@
         </ul>
       </li>
       <li class="brunches__card">
-        <span class="brunches__point">CAFE</span>
-        <h3 class="brunches__sity">New York</h3>
-        <p class="brunches__text">
-          Fusce ut velit laoreet, tempus arcu molestie vulputate
-        </p>
-        <div class="scheduele-box">
-          <ul>
-            <li>
-              <p class="schedule-days">Monday - Friday</p>
-              <p class="schedule-houres">06:00 AM - 10:00 PM</p>
-            </li>
-
-            <li>
-              <p class="schedule-days">Saturday - Sunday</p>
-              <p class="schedule-houres">08:00 AM - 16:00 PM</p>
-            </li>
-          </ul>
+        <div class="title-box">
+          <span class="brunches__point">CAFE</span>
+          <h3 class="brunches__sity">New York</h3>
+          <p class="brunches__text">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </p>
         </div>
+        <ul class="scheduele-box">
+          <li>
+            <p class="schedule-days">Monday - Friday</p>
+            <p class="schedule-houres">06:00 AM - 10:00 PM</p>
+          </li>
 
-        <ul>
+          <li>
+            <p class="schedule-days">Saturday - Sunday</p>
+            <p class="schedule-houres">08:00 AM - 16:00 PM</p>
+          </li>
+        </ul>
+
+        <ul class="contacts-box">
           <li>
             <a class="brunches__contacts" href="tel:+610383766284"
               >+61(0) 383 766 284</a
@@ -133,10 +133,8 @@
   <div class="backdrop is-hidden" data-modal-contact>
     <div class="modal">
       <button type="button" class="close-button" data-modal-contact-close>
-        <svg class="close-button-icon"
-          width="18"
-          height="18"
-   ><use href="./images/sprite.svg#icon-close-modal-contacts"></use> </svg>
+        <svg class="close-button-icon" width="18" height="18">
+          <use href="./images/sprite.svg#icon-close-modal-contacts"></use>
         </svg>
       </button>
 
@@ -187,21 +185,24 @@
           placeholder="Leave comment here"
         ></textarea>
 
-        <button class="button request-form__button " type="submit" data-modal-thanks-open>Send</button>
+        <button
+          class="button request-form__button"
+          type="submit"
+          data-modal-thanks-open
+        >
+          Send
+        </button>
       </form>
     </div>
-<div class="thanks-modal is-hidden" data-modal-thanks>
-  <button type="button" class="thanks-modal__close" data-modal-thanks-close>
-           <svg class="close-menu-icon" width="14" height="14">
-                <use href="./icons.svg#icon-close"></use>
-              </svg>
-              
-  </button>
-  <p class="thanks-modal__text">Thanks for your choice</p>
-</div>
-
+    <div class="thanks-modal is-hidden" data-modal-thanks>
+      <button type="button" class="thanks-modal__close" data-modal-thanks-close>
+        <svg class="close-menu-icon" width="14" height="14">
+          <use href="./icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <p class="thanks-modal__text">Thanks for your choice</p>
+    </div>
   </div>
 
   <script src="./js/thanks-modal-contacts.js" type="module"></script>
-
 </section>
