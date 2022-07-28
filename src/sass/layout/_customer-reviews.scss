@@ -10,6 +10,17 @@
 }
 .swiper-img {
     border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    @media screen and (min-width: 768px) {
+        width: 100px;
+        height: 100px;
+        }
+    
+    @media screen and (min-width: 1200px) {
+        width: 120px;
+        height: 120px;
+        }
 }
 
 .slider {
