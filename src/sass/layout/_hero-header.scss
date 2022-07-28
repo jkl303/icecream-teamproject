@@ -344,6 +344,10 @@
   height: 30px;
   color: $main-title-color;
   border-radius: 10px;
+  &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
 }
 
 .header__modal-form-textarea {
