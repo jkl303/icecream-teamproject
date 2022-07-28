@@ -1,6 +1,6 @@
 (() => {
-  const menuBtnRef = document.querySelector('[hero-button-menu]');
-  const mobileMenuRef = document.querySelector('[hero-menu]');
+  const menuBtnRef = document.querySelector('[data-hero-button-menu]');
+  const mobileMenuRef = document.querySelector('[data-hero-menu]');
 
   menuBtnRef.addEventListener('click', () => {
     const expanded =
