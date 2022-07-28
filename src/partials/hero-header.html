@@ -5,7 +5,7 @@
             <source srcset="./images/logo-1x.png 1x, ./images/logo-2x.png 2x">
           <img src="./images/logo-1x.png" alt="logo" />
           </picture>
-          <button type="button" class="header__burger-open">
+          <button type="button" class="header__burger-open" id="burger" >
             <svg class="button__burger" width="20" height="12">
               <use href="./icons.svg#icon-burger" ></use>
             </svg>
@@ -20,7 +20,7 @@
                 </ul>
           </div>
           <div class="btn-buy-tablet">
-              <button type="button" class="buy-now buy-now-tablet"><span class="buy-now-span">Buy now</span>
+              <button type="button" class="buy-now buy-now-tablet" id="buy-now-tab"><span class="buy-now-span">Buy now</span>
               <span class="span-icon">
                   <svg class="buy-now-icon" width="15" height="19">
                     <use href='./icons.svg#icon-keyboard_arrow_right'></use>
@@ -28,8 +28,12 @@
                 </span>
             </button>
             </div>
-          <div class="mob-menu invisible">
-            <button type="button" class="header__burger-close">
+          
+        </div>
+        
+        </div>
+        <div class="mob-menu invisible">
+            <button type="button" class="header__burger-close" >
               <svg class="close-menu-icon" width="14" height="14">
                 <use href="./icons.svg#icon-close-mob"></use>
               </svg>
@@ -51,8 +55,6 @@
                     <li class="nav-menu__item"><a href="#contact" class="nav-menu__link">Contact</a></li>
                 </ul>
           </div>
-        </div>
-        </div>
     </header>
         <section class="hero">
           <div class="container">
@@ -171,3 +173,5 @@
     <script type="module" src="./js/mobile-menu.js"></script>
     <script type="module" src="./js/modal-thanks.js"></script>
     <script type="module" src="./js/modal-mob-menu.js"></script>
+    <script type="module" src="./js/burger-btn.js"></script>
+    <script type="module" src="./js/buy-now-hidden.js"></script>
