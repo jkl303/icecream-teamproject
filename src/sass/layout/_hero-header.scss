@@ -30,13 +30,6 @@
 .visible {
   display: block;
 }
-.mobmenu.invisible {
-  left: -100%;
-  -webkit-transition: all ease-out 0.5s;
-  -moz-transition: all ease-out 0.5s;
-  -o-transition: all ease-out 0.5s;
-  transition: all ease-out 0.5s;
-}
 
 .btn-buy-tablet {
   display: none;
@@ -283,7 +276,7 @@
 .modal__header {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   width: 300px;
   height: 580px;
   z-index: 110;
@@ -292,7 +285,7 @@
   transform: opacity(1) translateX(-70%);
   transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
   @include tablet {
-    left: 60%;
+    right: 10px;
   }
   @include desktop {
     left: 74%;
@@ -344,6 +337,10 @@
   height: 30px;
   color: $main-title-color;
   border-radius: 10px;
+  &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
 }
 
 .header__modal-form-textarea {
@@ -394,11 +391,19 @@
   width: 280px;
   height: 550px;
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 20px;
   background-color: $main-title-color;
   z-index: 150;
   border-radius: 10px;
+  opacity: 1;
+  transform: opacity;
+  @include transition(opacity);
+}
+
+.modal-thanks.invisible {
+  opacity: 0;
+  @include transition(opacity);
 }
 
 .modal-submit {
