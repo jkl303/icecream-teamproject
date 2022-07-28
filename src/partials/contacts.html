@@ -157,7 +157,13 @@
 
         <div class="form-field">
           <label class="request-form__label" for="tel">Tel</label>
-          <input class="request-form__input" type="tel" id="tel" name="tel" />
+          <input type="number" 
+           name="tel" 
+           class="request-form__input"
+           pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+           id="tel" 
+          />
+
           <svg class="request-form__icon" width="18" height="18">
             <use href="./images/sprite.svg#icon-phone-contacts"></use>
           </svg>
