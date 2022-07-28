@@ -1,5 +1,12 @@
 .header {
   background-color: $header-color;
+  position: relative;
+}
+
+.header-wrapper {
+  position: absolute;
+  z-index: 10;
+  top: 0;
 }
 
 // .modal__header::-webkit-scrollbar {
@@ -73,7 +80,9 @@
 }
 
 .header__nav-mobile {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -334,7 +343,6 @@
   @include fonts(500, 12, 1.29, null);
   height: 30px;
   color: $main-title-color;
-  padding-left: 10px;
   border-radius: 10px;
 }
 
@@ -441,7 +449,7 @@
   width: 100%;
   height: 502px;
   background-color: #ffb8ca;
-  position: relative;
+  // position: relative;
 
   @include tablet {
     height: 416px;
